@@ -1,0 +1,1209 @@
+[2025-03-13 11:36:44] local.ERROR: Database file at path [/var/www/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: pragma foreign_keys = 0) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 0): Database file at path [/var/www/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: pragma foreign_keys = 0) at /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823)
+[stacktrace]
+#0 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('pragma foreign_...', Array, Object(Closure))
+#1 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(558): Illuminate\\Database\\Connection->run('pragma foreign_...', Array, Object(Closure))
+#2 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(589): Illuminate\\Database\\Connection->statement('pragma foreign_...')
+#3 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Database\\Schema\\Builder->disableForeignKeyConstraints()
+#4 /Users/fabietto/Blog/app/Providers/AppServiceProvider.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('disableForeignK...', Array)
+#5 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#6 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#7 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#8 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#9 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#10 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#11 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#12 [internal function]: Illuminate\\Foundation\\Application->{closure:Illuminate\\Foundation\\Application::boot():1131}(Object(App\\Providers\\AppServiceProvider), 'App\\\\Providers\\\\A...')
+#13 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#14 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#15 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#16 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#17 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#18 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 /Users/fabietto/Blog/artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#20 {main}
+
+[previous exception] [object] (Illuminate\\Database\\SQLiteDatabaseDoesNotExistException(code: 0): Database file at path [/var/www/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. at /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php:59)
+[stacktrace]
+#0 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php(19): Illuminate\\Database\\Connectors\\SQLiteConnector->parseDatabasePath(false)
+#1 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(224): Illuminate\\Database\\Connectors\\SQLiteConnector->connect(Array)
+#2 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->{closure:Illuminate\\Database\\Connectors\\ConnectionFactory::createPdoResolverWithoutHosts():224}()
+#3 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(1229): call_user_func(Object(Closure))
+#4 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(563): Illuminate\\Database\\Connection->getPdo()
+#5 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(810): Illuminate\\Database\\Connection->{closure:Illuminate\\Database\\Connection::statement():558}('pragma foreign_...', Array)
+#6 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('pragma foreign_...', Array, Object(Closure))
+#7 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(558): Illuminate\\Database\\Connection->run('pragma foreign_...', Array, Object(Closure))
+#8 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(589): Illuminate\\Database\\Connection->statement('pragma foreign_...')
+#9 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Database\\Schema\\Builder->disableForeignKeyConstraints()
+#10 /Users/fabietto/Blog/app/Providers/AppServiceProvider.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('disableForeignK...', Array)
+#11 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#12 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#13 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#14 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#15 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#16 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#17 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#18 [internal function]: Illuminate\\Foundation\\Application->{closure:Illuminate\\Foundation\\Application::boot():1131}(Object(App\\Providers\\AppServiceProvider), 'App\\\\Providers\\\\A...')
+#19 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#20 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#21 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#22 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#23 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#24 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /Users/fabietto/Blog/artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#26 {main}
+"} 
+[2025-03-13 11:38:06] local.ERROR: Database file at path [/var/www/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: pragma foreign_keys = 0) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 0): Database file at path [/var/www/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: pragma foreign_keys = 0) at /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823)
+[stacktrace]
+#0 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('pragma foreign_...', Array, Object(Closure))
+#1 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(558): Illuminate\\Database\\Connection->run('pragma foreign_...', Array, Object(Closure))
+#2 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(589): Illuminate\\Database\\Connection->statement('pragma foreign_...')
+#3 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Database\\Schema\\Builder->disableForeignKeyConstraints()
+#4 /Users/fabietto/Blog/app/Providers/AppServiceProvider.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('disableForeignK...', Array)
+#5 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#6 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#7 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#8 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#9 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#10 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#11 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#12 [internal function]: Illuminate\\Foundation\\Application->{closure:Illuminate\\Foundation\\Application::boot():1131}(Object(App\\Providers\\AppServiceProvider), 'App\\\\Providers\\\\A...')
+#13 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#14 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#15 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#16 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#17 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#18 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 /Users/fabietto/Blog/artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#20 {main}
+
+[previous exception] [object] (Illuminate\\Database\\SQLiteDatabaseDoesNotExistException(code: 0): Database file at path [/var/www/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. at /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php:59)
+[stacktrace]
+#0 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php(19): Illuminate\\Database\\Connectors\\SQLiteConnector->parseDatabasePath(false)
+#1 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(224): Illuminate\\Database\\Connectors\\SQLiteConnector->connect(Array)
+#2 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->{closure:Illuminate\\Database\\Connectors\\ConnectionFactory::createPdoResolverWithoutHosts():224}()
+#3 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(1229): call_user_func(Object(Closure))
+#4 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(563): Illuminate\\Database\\Connection->getPdo()
+#5 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(810): Illuminate\\Database\\Connection->{closure:Illuminate\\Database\\Connection::statement():558}('pragma foreign_...', Array)
+#6 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('pragma foreign_...', Array, Object(Closure))
+#7 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(558): Illuminate\\Database\\Connection->run('pragma foreign_...', Array, Object(Closure))
+#8 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(589): Illuminate\\Database\\Connection->statement('pragma foreign_...')
+#9 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Database\\Schema\\Builder->disableForeignKeyConstraints()
+#10 /Users/fabietto/Blog/app/Providers/AppServiceProvider.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('disableForeignK...', Array)
+#11 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#12 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#13 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#14 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#15 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#16 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#17 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#18 [internal function]: Illuminate\\Foundation\\Application->{closure:Illuminate\\Foundation\\Application::boot():1131}(Object(App\\Providers\\AppServiceProvider), 'App\\\\Providers\\\\A...')
+#19 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#20 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#21 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#22 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#23 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#24 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /Users/fabietto/Blog/artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#26 {main}
+"} 
+[2025-03-13 11:40:48] local.ERROR: Database file at path [/var/www/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: pragma foreign_keys = 0) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 0): Database file at path [/var/www/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: pragma foreign_keys = 0) at /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823)
+[stacktrace]
+#0 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('pragma foreign_...', Array, Object(Closure))
+#1 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(558): Illuminate\\Database\\Connection->run('pragma foreign_...', Array, Object(Closure))
+#2 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(589): Illuminate\\Database\\Connection->statement('pragma foreign_...')
+#3 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Database\\Schema\\Builder->disableForeignKeyConstraints()
+#4 /Users/fabietto/Blog/app/Providers/AppServiceProvider.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('disableForeignK...', Array)
+#5 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#6 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#7 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#8 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#9 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#10 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#11 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#12 [internal function]: Illuminate\\Foundation\\Application->{closure:Illuminate\\Foundation\\Application::boot():1131}(Object(App\\Providers\\AppServiceProvider), 'App\\\\Providers\\\\A...')
+#13 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#14 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#15 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#16 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#17 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#18 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 /Users/fabietto/Blog/artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#20 {main}
+
+[previous exception] [object] (Illuminate\\Database\\SQLiteDatabaseDoesNotExistException(code: 0): Database file at path [/var/www/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. at /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php:59)
+[stacktrace]
+#0 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php(19): Illuminate\\Database\\Connectors\\SQLiteConnector->parseDatabasePath(false)
+#1 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(224): Illuminate\\Database\\Connectors\\SQLiteConnector->connect(Array)
+#2 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->{closure:Illuminate\\Database\\Connectors\\ConnectionFactory::createPdoResolverWithoutHosts():224}()
+#3 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(1229): call_user_func(Object(Closure))
+#4 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(563): Illuminate\\Database\\Connection->getPdo()
+#5 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(810): Illuminate\\Database\\Connection->{closure:Illuminate\\Database\\Connection::statement():558}('pragma foreign_...', Array)
+#6 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('pragma foreign_...', Array, Object(Closure))
+#7 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(558): Illuminate\\Database\\Connection->run('pragma foreign_...', Array, Object(Closure))
+#8 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(589): Illuminate\\Database\\Connection->statement('pragma foreign_...')
+#9 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Database\\Schema\\Builder->disableForeignKeyConstraints()
+#10 /Users/fabietto/Blog/app/Providers/AppServiceProvider.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('disableForeignK...', Array)
+#11 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#12 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#13 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#14 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#15 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#16 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#17 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#18 [internal function]: Illuminate\\Foundation\\Application->{closure:Illuminate\\Foundation\\Application::boot():1131}(Object(App\\Providers\\AppServiceProvider), 'App\\\\Providers\\\\A...')
+#19 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#20 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#21 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#22 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#23 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#24 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /Users/fabietto/Blog/artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#26 {main}
+"} 
+[2025-03-13 11:42:22] local.ERROR: Database file at path [/var/www/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: pragma foreign_keys = 0) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 0): Database file at path [/var/www/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: pragma foreign_keys = 0) at /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823)
+[stacktrace]
+#0 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('pragma foreign_...', Array, Object(Closure))
+#1 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(558): Illuminate\\Database\\Connection->run('pragma foreign_...', Array, Object(Closure))
+#2 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(589): Illuminate\\Database\\Connection->statement('pragma foreign_...')
+#3 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Database\\Schema\\Builder->disableForeignKeyConstraints()
+#4 /Users/fabietto/Blog/app/Providers/AppServiceProvider.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('disableForeignK...', Array)
+#5 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#6 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#7 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#8 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#9 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#10 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#11 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#12 [internal function]: Illuminate\\Foundation\\Application->{closure:Illuminate\\Foundation\\Application::boot():1131}(Object(App\\Providers\\AppServiceProvider), 'App\\\\Providers\\\\A...')
+#13 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#14 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#15 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#16 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#17 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#18 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 /Users/fabietto/Blog/artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#20 {main}
+
+[previous exception] [object] (Illuminate\\Database\\SQLiteDatabaseDoesNotExistException(code: 0): Database file at path [/var/www/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. at /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php:59)
+[stacktrace]
+#0 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php(19): Illuminate\\Database\\Connectors\\SQLiteConnector->parseDatabasePath(false)
+#1 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(224): Illuminate\\Database\\Connectors\\SQLiteConnector->connect(Array)
+#2 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->{closure:Illuminate\\Database\\Connectors\\ConnectionFactory::createPdoResolverWithoutHosts():224}()
+#3 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(1229): call_user_func(Object(Closure))
+#4 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(563): Illuminate\\Database\\Connection->getPdo()
+#5 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(810): Illuminate\\Database\\Connection->{closure:Illuminate\\Database\\Connection::statement():558}('pragma foreign_...', Array)
+#6 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('pragma foreign_...', Array, Object(Closure))
+#7 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(558): Illuminate\\Database\\Connection->run('pragma foreign_...', Array, Object(Closure))
+#8 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(589): Illuminate\\Database\\Connection->statement('pragma foreign_...')
+#9 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Database\\Schema\\Builder->disableForeignKeyConstraints()
+#10 /Users/fabietto/Blog/app/Providers/AppServiceProvider.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('disableForeignK...', Array)
+#11 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#12 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#13 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#14 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#15 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#16 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#17 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#18 [internal function]: Illuminate\\Foundation\\Application->{closure:Illuminate\\Foundation\\Application::boot():1131}(Object(App\\Providers\\AppServiceProvider), 'App\\\\Providers\\\\A...')
+#19 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#20 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#21 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#22 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#23 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#24 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /Users/fabietto/Blog/artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#26 {main}
+"} 
+[2025-03-13 11:45:06] local.ERROR: Database file at path [/var/www/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: pragma foreign_keys = 0) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 0): Database file at path [/var/www/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: pragma foreign_keys = 0) at /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823)
+[stacktrace]
+#0 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('pragma foreign_...', Array, Object(Closure))
+#1 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(558): Illuminate\\Database\\Connection->run('pragma foreign_...', Array, Object(Closure))
+#2 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(589): Illuminate\\Database\\Connection->statement('pragma foreign_...')
+#3 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Database\\Schema\\Builder->disableForeignKeyConstraints()
+#4 /Users/fabietto/Blog/app/Providers/AppServiceProvider.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('disableForeignK...', Array)
+#5 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#6 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#7 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#8 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#9 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#10 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#11 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#12 [internal function]: Illuminate\\Foundation\\Application->{closure:Illuminate\\Foundation\\Application::boot():1131}(Object(App\\Providers\\AppServiceProvider), 'App\\\\Providers\\\\A...')
+#13 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#14 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#15 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#16 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#17 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#18 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 /Users/fabietto/Blog/artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#20 {main}
+
+[previous exception] [object] (Illuminate\\Database\\SQLiteDatabaseDoesNotExistException(code: 0): Database file at path [/var/www/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. at /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php:59)
+[stacktrace]
+#0 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php(19): Illuminate\\Database\\Connectors\\SQLiteConnector->parseDatabasePath(false)
+#1 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(224): Illuminate\\Database\\Connectors\\SQLiteConnector->connect(Array)
+#2 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->{closure:Illuminate\\Database\\Connectors\\ConnectionFactory::createPdoResolverWithoutHosts():224}()
+#3 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(1229): call_user_func(Object(Closure))
+#4 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(563): Illuminate\\Database\\Connection->getPdo()
+#5 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(810): Illuminate\\Database\\Connection->{closure:Illuminate\\Database\\Connection::statement():558}('pragma foreign_...', Array)
+#6 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('pragma foreign_...', Array, Object(Closure))
+#7 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(558): Illuminate\\Database\\Connection->run('pragma foreign_...', Array, Object(Closure))
+#8 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(589): Illuminate\\Database\\Connection->statement('pragma foreign_...')
+#9 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Database\\Schema\\Builder->disableForeignKeyConstraints()
+#10 /Users/fabietto/Blog/app/Providers/AppServiceProvider.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('disableForeignK...', Array)
+#11 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#12 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#13 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#14 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#15 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#16 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#17 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#18 [internal function]: Illuminate\\Foundation\\Application->{closure:Illuminate\\Foundation\\Application::boot():1131}(Object(App\\Providers\\AppServiceProvider), 'App\\\\Providers\\\\A...')
+#19 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#20 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#21 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#22 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#23 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#24 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /Users/fabietto/Blog/artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#26 {main}
+"} 
+[2025-03-13 11:47:25] local.ERROR: Database file at path [/var/www/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: pragma foreign_keys = 0) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 0): Database file at path [/var/www/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: pragma foreign_keys = 0) at /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823)
+[stacktrace]
+#0 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('pragma foreign_...', Array, Object(Closure))
+#1 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(558): Illuminate\\Database\\Connection->run('pragma foreign_...', Array, Object(Closure))
+#2 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(589): Illuminate\\Database\\Connection->statement('pragma foreign_...')
+#3 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Database\\Schema\\Builder->disableForeignKeyConstraints()
+#4 /Users/fabietto/Blog/app/Providers/AppServiceProvider.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('disableForeignK...', Array)
+#5 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#6 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#7 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#8 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#9 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#10 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#11 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#12 [internal function]: Illuminate\\Foundation\\Application->{closure:Illuminate\\Foundation\\Application::boot():1131}(Object(App\\Providers\\AppServiceProvider), 'App\\\\Providers\\\\A...')
+#13 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#14 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#15 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#16 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#17 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#18 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 /Users/fabietto/Blog/artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#20 {main}
+
+[previous exception] [object] (Illuminate\\Database\\SQLiteDatabaseDoesNotExistException(code: 0): Database file at path [/var/www/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. at /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php:59)
+[stacktrace]
+#0 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php(19): Illuminate\\Database\\Connectors\\SQLiteConnector->parseDatabasePath(false)
+#1 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(224): Illuminate\\Database\\Connectors\\SQLiteConnector->connect(Array)
+#2 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->{closure:Illuminate\\Database\\Connectors\\ConnectionFactory::createPdoResolverWithoutHosts():224}()
+#3 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(1229): call_user_func(Object(Closure))
+#4 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(563): Illuminate\\Database\\Connection->getPdo()
+#5 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(810): Illuminate\\Database\\Connection->{closure:Illuminate\\Database\\Connection::statement():558}('pragma foreign_...', Array)
+#6 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('pragma foreign_...', Array, Object(Closure))
+#7 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Connection.php(558): Illuminate\\Database\\Connection->run('pragma foreign_...', Array, Object(Closure))
+#8 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(589): Illuminate\\Database\\Connection->statement('pragma foreign_...')
+#9 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Database\\Schema\\Builder->disableForeignKeyConstraints()
+#10 /Users/fabietto/Blog/app/Providers/AppServiceProvider.php(24): Illuminate\\Support\\Facades\\Facade::__callStatic('disableForeignK...', Array)
+#11 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#12 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::{closure:Illuminate\\Container\\BoundMethod::call():35}()
+#13 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#14 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#15 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#16 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#17 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#18 [internal function]: Illuminate\\Foundation\\Application->{closure:Illuminate\\Foundation\\Application::boot():1131}(Object(App\\Providers\\AppServiceProvider), 'App\\\\Providers\\\\A...')
+#19 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#20 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#21 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#22 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#23 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#24 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /Users/fabietto/Blog/artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#26 {main}
+"} 
+[2025-03-13 11:51:04] local.ERROR: There are no commands defined in the "chache" namespace.
+
+Did you mean this?
+    cache {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"chache\" namespace.
+
+Did you mean this?
+    cache at /Users/fabietto/Blog/vendor/symfony/console/Application.php:660)
+[stacktrace]
+#0 /Users/fabietto/Blog/vendor/symfony/console/Application.php(709): Symfony\\Component\\Console\\Application->findNamespace('chache')
+#1 /Users/fabietto/Blog/vendor/symfony/console/Application.php(284): Symfony\\Component\\Console\\Application->find('chache:clear')
+#2 /Users/fabietto/Blog/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 /Users/fabietto/Blog/artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#6 {main}
+"} 
+[2025-03-13 12:02:47] local.ERROR: There are no commands defined in the "make:" namespace.
+
+Did you mean this?
+    make {"exception":"[object] (Symfony\\Component\\Console\\Exception\\NamespaceNotFoundException(code: 0): There are no commands defined in the \"make:\" namespace.
+
+Did you mean this?
+    make at /Users/fabietto/Blog/vendor/symfony/console/Application.php:660)
+[stacktrace]
+#0 /Users/fabietto/Blog/vendor/symfony/console/Application.php(709): Symfony\\Component\\Console\\Application->findNamespace('make:')
+#1 /Users/fabietto/Blog/vendor/symfony/console/Application.php(284): Symfony\\Component\\Console\\Application->find('make::controlle...')
+#2 /Users/fabietto/Blog/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 /Users/fabietto/Blog/artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#6 {main}
+"} 
+[2025-03-13 13:22:45] local.ERROR: Call to undefined method App\Http\Controllers\UserController::store() {"exception":"[object] (Error(code: 0): Call to undefined method App\\Http\\Controllers\\UserController::store() at /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php:47)
+[stacktrace]
+#0 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Routing/Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\UserController), 'store')
+#1 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Routing/Route.php(212): Illuminate\\Routing\\Route->runController()
+#2 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Routing/Router.php(808): Illuminate\\Routing\\Route->run()
+#3 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Routing\\Router->{closure:Illuminate\\Routing\\Router::runRouteWithinStack():807}(Object(Illuminate\\Http\\Request))
+#4 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}(Object(Illuminate\\Http\\Request))
+#5 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#6 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#7 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#8 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Routing/Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#9 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Routing/Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#10 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Routing/Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#11 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#12 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->{closure:Illuminate\\Foundation\\Http\\Kernel::dispatchToRouter():198}(Object(Illuminate\\Http\\Request))
+#13 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:Illuminate\\Pipeline\\Pipeline::prepareDestination():168}(Object(Illuminate\\Http\\Request))
+#14 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#15 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#16 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#17 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#18 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#19 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#20 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#21 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#22 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#24 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#26 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#28 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#29 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#30 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#31 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->{closure:{closure:Illuminate\\Pipeline\\Pipeline::carry():184}:185}(Object(Illuminate\\Http\\Request))
+#32 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#33 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#34 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#35 /Users/fabietto/Blog/public/index.php(20): Illuminate\\Foundation\\Application->handleRequest(Object(Illuminate\\Http\\Request))
+#36 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(23): require_once('/Users/fabietto...')
+#37 {main}
+"} 
+[2025-03-14 08:55:53] local.ERROR: Database file at path [/Users/fabietto/Blog/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: pragma foreign_keys = 0) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 0): Database file at path [/Users/fabietto/Blog/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. (Connection: sqlite, SQL: pragma foreign_keys = 0) at /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823)
+[stacktrace]
+#0 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('pragma foreign_...', Array, Object(Closure))
+#1 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(558): Illuminate\\Database\\Connection->run('pragma foreign_...', Array, Object(Closure))
+#2 /var/www/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(589): Illuminate\\Database\\Connection->statement('pragma foreign_...')
+#3 /var/www/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Database\\Schema\\Builder->disableForeignKeyConstraints()
+#4 /var/www/app/Providers/AppServiceProvider.php(29): Illuminate\\Support\\Facades\\Facade::__callStatic('disableForeignK...', Array)
+#5 /var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#6 /var/www/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#7 /var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#8 /var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#9 /var/www/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#10 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#11 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#12 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 'App\\\\Providers\\\\A...')
+#13 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#14 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#15 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#16 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#17 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#18 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 /var/www/artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#20 {main}
+
+[previous exception] [object] (Illuminate\\Database\\SQLiteDatabaseDoesNotExistException(code: 0): Database file at path [/Users/fabietto/Blog/database/database.sqlite] does not exist. Ensure this is an absolute path to the database. at /var/www/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php:59)
+[stacktrace]
+#0 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connectors/SQLiteConnector.php(19): Illuminate\\Database\\Connectors\\SQLiteConnector->parseDatabasePath(false)
+#1 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connectors/ConnectionFactory.php(224): Illuminate\\Database\\Connectors\\SQLiteConnector->connect(Array)
+#2 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#3 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(1229): call_user_func(Object(Closure))
+#4 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(563): Illuminate\\Database\\Connection->getPdo()
+#5 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(810): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('pragma foreign_...', Array)
+#6 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('pragma foreign_...', Array, Object(Closure))
+#7 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(558): Illuminate\\Database\\Connection->run('pragma foreign_...', Array, Object(Closure))
+#8 /var/www/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(589): Illuminate\\Database\\Connection->statement('pragma foreign_...')
+#9 /var/www/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(361): Illuminate\\Database\\Schema\\Builder->disableForeignKeyConstraints()
+#10 /var/www/app/Providers/AppServiceProvider.php(29): Illuminate\\Support\\Facades\\Facade::__callStatic('disableForeignK...', Array)
+#11 /var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Providers\\AppServiceProvider->boot()
+#12 /var/www/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#13 /var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#14 /var/www/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#15 /var/www/vendor/laravel/framework/src/Illuminate/Container/Container.php(754): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#16 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1151): Illuminate\\Container\\Container->call(Array)
+#17 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1132): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AppServiceProvider))
+#18 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AppServiceProvider), 'App\\\\Providers\\\\A...')
+#19 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1131): array_walk(Array, Object(Closure))
+#20 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#21 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#22 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#23 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#24 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#25 /var/www/artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#26 {main}
+"} 
+[2025-03-14 10:52:38] testing.ERROR: SQLSTATE[42703]: Undefined column: 7 ERROR:  column " email" does not exist
+LINE 1: select count(*) as aggregate from "users" where " email" = $...
+                                                        ^
+HINT:  Perhaps you meant to reference the column "users.email". (Connection: pgsql, SQL: select count(*) as aggregate from "users" where " email" = test@example.com) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42703): SQLSTATE[42703]: Undefined column: 7 ERROR:  column \" email\" does not exist
+LINE 1: select count(*) as aggregate from \"users\" where \" email\" = $...
+                                                        ^
+HINT:  Perhaps you meant to reference the column \"users.email\". (Connection: pgsql, SQL: select count(*) as aggregate from \"users\" where \" email\" = test@example.com) at /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823)
+[stacktrace]
+#0 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#1 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(396): Illuminate\\Database\\Connection->run('select count(*)...', Array, Object(Closure))
+#2 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3107): Illuminate\\Database\\Connection->select('select count(*)...', Array, false)
+#3 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3092): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3677): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3091): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3604): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3532): Illuminate\\Database\\Query\\Builder->aggregate('count', Array)
+#8 /var/www/vendor/laravel/framework/src/Illuminate/Validation/DatabasePresenceVerifier.php(54): Illuminate\\Database\\Query\\Builder->count()
+#9 /var/www/vendor/laravel/framework/src/Illuminate/Validation/Concerns/ValidatesAttributes.php(1029): Illuminate\\Validation\\DatabasePresenceVerifier->getCount('users', ' email', 'test@example.co...', NULL, NULL, Array)
+#10 /var/www/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(686): Illuminate\\Validation\\Validator->validateUnique('email', 'test@example.co...', Array, Object(Illuminate\\Validation\\Validator))
+#11 /var/www/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(481): Illuminate\\Validation\\Validator->validateAttribute('email', 'Unique')
+#12 /var/www/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(516): Illuminate\\Validation\\Validator->passes()
+#13 /var/www/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(558): Illuminate\\Validation\\Validator->fails()
+#14 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Providers/FoundationServiceProvider.php(155): Illuminate\\Validation\\Validator->validate()
+#15 /var/www/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php(126): Illuminate\\Http\\Request->Illuminate\\Foundation\\Providers\\{closure}(Array)
+#16 /var/www/app/Http/Controllers/UserController.php(21): Illuminate\\Http\\Request->__call('validate', Array)
+#17 /var/www/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(47): App\\Http\\Controllers\\UserController->createUser(Object(Illuminate\\Http\\Request))
+#18 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\UserController), 'createUser')
+#19 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php(212): Illuminate\\Routing\\Route->runController()
+#20 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(808): Illuminate\\Routing\\Route->run()
+#21 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#26 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#27 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#28 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#29 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#30 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#51 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#52 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#53 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(573): Illuminate\\Foundation\\Testing\\TestCase->call('POST', '/api/users', Array, Array, Array, Array, '{\"name\":\"Test U...')
+#54 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(411): Illuminate\\Foundation\\Testing\\TestCase->json('POST', '/api/users', Array, Array, 0)
+#55 /var/www/tests/Feature/UserControllerTest.php(20): Illuminate\\Foundation\\Testing\\TestCase->postJson('/api/users', Array)
+#56 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(1240): Tests\\Feature\\UserControllerTest->testCreateUser()
+#57 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\\Framework\\TestCase->runTest()
+#58 /var/www/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\\Framework\\TestCase->runBare()
+#59 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\\Framework\\TestRunner->run(Object(Tests\\Feature\\UserControllerTest))
+#60 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestCase->run()
+#61 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestSuite->run()
+#62 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestSuite->run()
+#63 /var/www/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\\Framework\\TestSuite->run()
+#64 /var/www/vendor/phpunit/phpunit/src/TextUI/Application.php(210): PHPUnit\\TextUI\\TestRunner->run(Object(PHPUnit\\TextUI\\Configuration\\Configuration), Object(PHPUnit\\Runner\\ResultCache\\DefaultResultCache), Object(PHPUnit\\Framework\\TestSuite))
+#65 /var/www/vendor/phpunit/phpunit/phpunit(104): PHPUnit\\TextUI\\Application->run(Array)
+#66 {main}
+
+[previous exception] [object] (PDOException(code: 42703): SQLSTATE[42703]: Undefined column: 7 ERROR:  column \" email\" does not exist
+LINE 1: select count(*) as aggregate from \"users\" where \" email\" = $...
+                                                        ^
+HINT:  Perhaps you meant to reference the column \"users.email\". at /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php:410)
+[stacktrace]
+#0 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(410): PDOStatement->execute()
+#1 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(810): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select count(*)...', Array)
+#2 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#3 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(396): Illuminate\\Database\\Connection->run('select count(*)...', Array, Object(Closure))
+#4 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3107): Illuminate\\Database\\Connection->select('select count(*)...', Array, false)
+#5 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3092): Illuminate\\Database\\Query\\Builder->runSelect()
+#6 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3677): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#7 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3091): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#8 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3604): Illuminate\\Database\\Query\\Builder->get(Array)
+#9 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3532): Illuminate\\Database\\Query\\Builder->aggregate('count', Array)
+#10 /var/www/vendor/laravel/framework/src/Illuminate/Validation/DatabasePresenceVerifier.php(54): Illuminate\\Database\\Query\\Builder->count()
+#11 /var/www/vendor/laravel/framework/src/Illuminate/Validation/Concerns/ValidatesAttributes.php(1029): Illuminate\\Validation\\DatabasePresenceVerifier->getCount('users', ' email', 'test@example.co...', NULL, NULL, Array)
+#12 /var/www/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(686): Illuminate\\Validation\\Validator->validateUnique('email', 'test@example.co...', Array, Object(Illuminate\\Validation\\Validator))
+#13 /var/www/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(481): Illuminate\\Validation\\Validator->validateAttribute('email', 'Unique')
+#14 /var/www/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(516): Illuminate\\Validation\\Validator->passes()
+#15 /var/www/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(558): Illuminate\\Validation\\Validator->fails()
+#16 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Providers/FoundationServiceProvider.php(155): Illuminate\\Validation\\Validator->validate()
+#17 /var/www/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php(126): Illuminate\\Http\\Request->Illuminate\\Foundation\\Providers\\{closure}(Array)
+#18 /var/www/app/Http/Controllers/UserController.php(21): Illuminate\\Http\\Request->__call('validate', Array)
+#19 /var/www/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(47): App\\Http\\Controllers\\UserController->createUser(Object(Illuminate\\Http\\Request))
+#20 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\UserController), 'createUser')
+#21 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php(212): Illuminate\\Routing\\Route->runController()
+#22 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(808): Illuminate\\Routing\\Route->run()
+#23 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#28 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#29 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#30 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#31 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#32 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#53 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#54 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#55 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(573): Illuminate\\Foundation\\Testing\\TestCase->call('POST', '/api/users', Array, Array, Array, Array, '{\"name\":\"Test U...')
+#56 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(411): Illuminate\\Foundation\\Testing\\TestCase->json('POST', '/api/users', Array, Array, 0)
+#57 /var/www/tests/Feature/UserControllerTest.php(20): Illuminate\\Foundation\\Testing\\TestCase->postJson('/api/users', Array)
+#58 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(1240): Tests\\Feature\\UserControllerTest->testCreateUser()
+#59 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\\Framework\\TestCase->runTest()
+#60 /var/www/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\\Framework\\TestCase->runBare()
+#61 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\\Framework\\TestRunner->run(Object(Tests\\Feature\\UserControllerTest))
+#62 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestCase->run()
+#63 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestSuite->run()
+#64 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestSuite->run()
+#65 /var/www/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\\Framework\\TestSuite->run()
+#66 /var/www/vendor/phpunit/phpunit/src/TextUI/Application.php(210): PHPUnit\\TextUI\\TestRunner->run(Object(PHPUnit\\TextUI\\Configuration\\Configuration), Object(PHPUnit\\Runner\\ResultCache\\DefaultResultCache), Object(PHPUnit\\Framework\\TestSuite))
+#67 /var/www/vendor/phpunit/phpunit/phpunit(104): PHPUnit\\TextUI\\Application->run(Array)
+#68 {main}
+"} 
+[2025-03-14 10:52:38] testing.ERROR: SQLSTATE[42703]: Undefined column: 7 ERROR:  column " email" does not exist
+LINE 1: select count(*) as aggregate from "users" where " email" = $...
+                                                        ^
+HINT:  Perhaps you meant to reference the column "users.email". (Connection: pgsql, SQL: select count(*) as aggregate from "users" where " email" = updated@example.com) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 42703): SQLSTATE[42703]: Undefined column: 7 ERROR:  column \" email\" does not exist
+LINE 1: select count(*) as aggregate from \"users\" where \" email\" = $...
+                                                        ^
+HINT:  Perhaps you meant to reference the column \"users.email\". (Connection: pgsql, SQL: select count(*) as aggregate from \"users\" where \" email\" = updated@example.com) at /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823)
+[stacktrace]
+#0 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#1 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(396): Illuminate\\Database\\Connection->run('select count(*)...', Array, Object(Closure))
+#2 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3107): Illuminate\\Database\\Connection->select('select count(*)...', Array, false)
+#3 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3092): Illuminate\\Database\\Query\\Builder->runSelect()
+#4 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3677): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#5 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3091): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#6 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3604): Illuminate\\Database\\Query\\Builder->get(Array)
+#7 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3532): Illuminate\\Database\\Query\\Builder->aggregate('count', Array)
+#8 /var/www/vendor/laravel/framework/src/Illuminate/Validation/DatabasePresenceVerifier.php(54): Illuminate\\Database\\Query\\Builder->count()
+#9 /var/www/vendor/laravel/framework/src/Illuminate/Validation/Concerns/ValidatesAttributes.php(1029): Illuminate\\Validation\\DatabasePresenceVerifier->getCount('users', ' email', 'updated@example...', NULL, NULL, Array)
+#10 /var/www/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(686): Illuminate\\Validation\\Validator->validateUnique('email', 'updated@example...', Array, Object(Illuminate\\Validation\\Validator))
+#11 /var/www/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(481): Illuminate\\Validation\\Validator->validateAttribute('email', 'Unique')
+#12 /var/www/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(516): Illuminate\\Validation\\Validator->passes()
+#13 /var/www/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(558): Illuminate\\Validation\\Validator->fails()
+#14 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Providers/FoundationServiceProvider.php(155): Illuminate\\Validation\\Validator->validate()
+#15 /var/www/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php(126): Illuminate\\Http\\Request->Illuminate\\Foundation\\Providers\\{closure}(Array)
+#16 /var/www/app/Http/Controllers/UserController.php(43): Illuminate\\Http\\Request->__call('validate', Array)
+#17 /var/www/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(47): App\\Http\\Controllers\\UserController->updateUser(Object(Illuminate\\Http\\Request), Object(App\\Models\\User))
+#18 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\UserController), 'updateUser')
+#19 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php(212): Illuminate\\Routing\\Route->runController()
+#20 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(808): Illuminate\\Routing\\Route->run()
+#21 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#23 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#26 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#27 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#28 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#29 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#30 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#35 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#38 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#51 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#52 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#53 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(573): Illuminate\\Foundation\\Testing\\TestCase->call('PUT', '/api/users/5', Array, Array, Array, Array, '{\"name\":\"Update...')
+#54 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(441): Illuminate\\Foundation\\Testing\\TestCase->json('PUT', '/api/users/5', Array, Array, 0)
+#55 /var/www/tests/Feature/UserControllerTest.php(65): Illuminate\\Foundation\\Testing\\TestCase->putJson('/api/users/5', Array)
+#56 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(1240): Tests\\Feature\\UserControllerTest->testUpdateUser()
+#57 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\\Framework\\TestCase->runTest()
+#58 /var/www/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\\Framework\\TestCase->runBare()
+#59 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\\Framework\\TestRunner->run(Object(Tests\\Feature\\UserControllerTest))
+#60 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestCase->run()
+#61 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestSuite->run()
+#62 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestSuite->run()
+#63 /var/www/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\\Framework\\TestSuite->run()
+#64 /var/www/vendor/phpunit/phpunit/src/TextUI/Application.php(210): PHPUnit\\TextUI\\TestRunner->run(Object(PHPUnit\\TextUI\\Configuration\\Configuration), Object(PHPUnit\\Runner\\ResultCache\\DefaultResultCache), Object(PHPUnit\\Framework\\TestSuite))
+#65 /var/www/vendor/phpunit/phpunit/phpunit(104): PHPUnit\\TextUI\\Application->run(Array)
+#66 {main}
+
+[previous exception] [object] (PDOException(code: 42703): SQLSTATE[42703]: Undefined column: 7 ERROR:  column \" email\" does not exist
+LINE 1: select count(*) as aggregate from \"users\" where \" email\" = $...
+                                                        ^
+HINT:  Perhaps you meant to reference the column \"users.email\". at /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php:410)
+[stacktrace]
+#0 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(410): PDOStatement->execute()
+#1 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(810): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select count(*)...', Array)
+#2 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('select count(*)...', Array, Object(Closure))
+#3 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(396): Illuminate\\Database\\Connection->run('select count(*)...', Array, Object(Closure))
+#4 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3107): Illuminate\\Database\\Connection->select('select count(*)...', Array, false)
+#5 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3092): Illuminate\\Database\\Query\\Builder->runSelect()
+#6 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3677): Illuminate\\Database\\Query\\Builder->Illuminate\\Database\\Query\\{closure}()
+#7 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3091): Illuminate\\Database\\Query\\Builder->onceWithColumns(Array, Object(Closure))
+#8 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3604): Illuminate\\Database\\Query\\Builder->get(Array)
+#9 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3532): Illuminate\\Database\\Query\\Builder->aggregate('count', Array)
+#10 /var/www/vendor/laravel/framework/src/Illuminate/Validation/DatabasePresenceVerifier.php(54): Illuminate\\Database\\Query\\Builder->count()
+#11 /var/www/vendor/laravel/framework/src/Illuminate/Validation/Concerns/ValidatesAttributes.php(1029): Illuminate\\Validation\\DatabasePresenceVerifier->getCount('users', ' email', 'updated@example...', NULL, NULL, Array)
+#12 /var/www/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(686): Illuminate\\Validation\\Validator->validateUnique('email', 'updated@example...', Array, Object(Illuminate\\Validation\\Validator))
+#13 /var/www/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(481): Illuminate\\Validation\\Validator->validateAttribute('email', 'Unique')
+#14 /var/www/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(516): Illuminate\\Validation\\Validator->passes()
+#15 /var/www/vendor/laravel/framework/src/Illuminate/Validation/Validator.php(558): Illuminate\\Validation\\Validator->fails()
+#16 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Providers/FoundationServiceProvider.php(155): Illuminate\\Validation\\Validator->validate()
+#17 /var/www/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php(126): Illuminate\\Http\\Request->Illuminate\\Foundation\\Providers\\{closure}(Array)
+#18 /var/www/app/Http/Controllers/UserController.php(43): Illuminate\\Http\\Request->__call('validate', Array)
+#19 /var/www/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(47): App\\Http\\Controllers\\UserController->updateUser(Object(Illuminate\\Http\\Request), Object(App\\Models\\User))
+#20 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\UserController), 'updateUser')
+#21 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php(212): Illuminate\\Routing\\Route->runController()
+#22 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(808): Illuminate\\Routing\\Route->run()
+#23 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#26 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#27 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#28 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#29 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#30 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#31 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#32 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#39 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#40 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#41 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#42 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#45 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#46 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#47 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#48 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#51 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#52 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#53 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#54 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#55 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(573): Illuminate\\Foundation\\Testing\\TestCase->call('PUT', '/api/users/5', Array, Array, Array, Array, '{\"name\":\"Update...')
+#56 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(441): Illuminate\\Foundation\\Testing\\TestCase->json('PUT', '/api/users/5', Array, Array, 0)
+#57 /var/www/tests/Feature/UserControllerTest.php(65): Illuminate\\Foundation\\Testing\\TestCase->putJson('/api/users/5', Array)
+#58 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(1240): Tests\\Feature\\UserControllerTest->testUpdateUser()
+#59 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\\Framework\\TestCase->runTest()
+#60 /var/www/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\\Framework\\TestCase->runBare()
+#61 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\\Framework\\TestRunner->run(Object(Tests\\Feature\\UserControllerTest))
+#62 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestCase->run()
+#63 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestSuite->run()
+#64 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestSuite->run()
+#65 /var/www/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\\Framework\\TestSuite->run()
+#66 /var/www/vendor/phpunit/phpunit/src/TextUI/Application.php(210): PHPUnit\\TextUI\\TestRunner->run(Object(PHPUnit\\TextUI\\Configuration\\Configuration), Object(PHPUnit\\Runner\\ResultCache\\DefaultResultCache), Object(PHPUnit\\Framework\\TestSuite))
+#67 /var/www/vendor/phpunit/phpunit/phpunit(104): PHPUnit\\TextUI\\Application->run(Array)
+#68 {main}
+"} 
+[2025-03-14 10:58:33] testing.ERROR: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "password" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (1, Test User, test@example.com, null, null, null, 2025-03-14 10:58:33, 2025-03-14 10:58:33). (Connection: pgsql, SQL: insert into "users" ("name", "email", "updated_at", "created_at") values (Test User, test@example.com, 2025-03-14 10:58:33, 2025-03-14 10:58:33) returning "id") {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23502): SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column \"password\" of relation \"users\" violates not-null constraint
+DETAIL:  Failing row contains (1, Test User, test@example.com, null, null, null, 2025-03-14 10:58:33, 2025-03-14 10:58:33). (Connection: pgsql, SQL: insert into \"users\" (\"name\", \"email\", \"updated_at\", \"created_at\") values (Test User, test@example.com, 2025-03-14 10:58:33, 2025-03-14 10:58:33) returning \"id\") at /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823)
+[stacktrace]
+#0 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('insert into \"us...', Array, Object(Closure))
+#1 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(396): Illuminate\\Database\\Connection->run('insert into \"us...', Array, Object(Closure))
+#2 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(383): Illuminate\\Database\\Connection->select('insert into \"us...', Array, false)
+#3 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/PostgresProcessor.php(24): Illuminate\\Database\\Connection->selectFromWriteConnection('insert into \"us...', Array)
+#4 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3767): Illuminate\\Database\\Query\\Processors\\PostgresProcessor->processInsertGetId(Object(Illuminate\\Database\\Query\\Builder), 'insert into \"us...', Array, 'id')
+#5 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(2141): Illuminate\\Database\\Query\\Builder->insertGetId(Array, 'id')
+#6 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1359): Illuminate\\Database\\Eloquent\\Builder->__call('insertGetId', Array)
+#7 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1324): Illuminate\\Database\\Eloquent\\Model->insertAndSetId(Object(Illuminate\\Database\\Eloquent\\Builder), Array)
+#8 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1163): Illuminate\\Database\\Eloquent\\Model->performInsert(Object(Illuminate\\Database\\Eloquent\\Builder))
+#9 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1128): Illuminate\\Database\\Eloquent\\Model->save()
+#10 /var/www/vendor/laravel/framework/src/Illuminate/Support/helpers.php(399): Illuminate\\Database\\Eloquent\\Builder->Illuminate\\Database\\Eloquent\\{closure}(Object(App\\Models\\User))
+#11 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1127): tap(Object(App\\Models\\User), Object(Closure))
+#12 /var/www/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create(Array)
+#13 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2372): Illuminate\\Database\\Eloquent\\Model->forwardCallTo(Object(Illuminate\\Database\\Eloquent\\Builder), 'create', Array)
+#14 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2384): Illuminate\\Database\\Eloquent\\Model->__call('create', Array)
+#15 /var/www/app/Http/Controllers/UserController.php(26): Illuminate\\Database\\Eloquent\\Model::__callStatic('create', Array)
+#16 /var/www/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(47): App\\Http\\Controllers\\UserController->createUser(Object(Illuminate\\Http\\Request))
+#17 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\UserController), 'createUser')
+#18 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php(212): Illuminate\\Routing\\Route->runController()
+#19 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(808): Illuminate\\Routing\\Route->run()
+#20 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#25 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#26 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#27 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#28 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#29 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#30 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#50 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#51 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#52 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(573): Illuminate\\Foundation\\Testing\\TestCase->call('POST', '/api/users', Array, Array, Array, Array, '{\"name\":\"Test U...')
+#53 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(411): Illuminate\\Foundation\\Testing\\TestCase->json('POST', '/api/users', Array, Array, 0)
+#54 /var/www/tests/Feature/UserControllerTest.php(20): Illuminate\\Foundation\\Testing\\TestCase->postJson('/api/users', Array)
+#55 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(1240): Tests\\Feature\\UserControllerTest->testCreateUser()
+#56 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\\Framework\\TestCase->runTest()
+#57 /var/www/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\\Framework\\TestCase->runBare()
+#58 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\\Framework\\TestRunner->run(Object(Tests\\Feature\\UserControllerTest))
+#59 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestCase->run()
+#60 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestSuite->run()
+#61 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestSuite->run()
+#62 /var/www/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\\Framework\\TestSuite->run()
+#63 /var/www/vendor/phpunit/phpunit/src/TextUI/Application.php(210): PHPUnit\\TextUI\\TestRunner->run(Object(PHPUnit\\TextUI\\Configuration\\Configuration), Object(PHPUnit\\Runner\\ResultCache\\DefaultResultCache), Object(PHPUnit\\Framework\\TestSuite))
+#64 /var/www/vendor/phpunit/phpunit/phpunit(104): PHPUnit\\TextUI\\Application->run(Array)
+#65 {main}
+
+[previous exception] [object] (PDOException(code: 23502): SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column \"password\" of relation \"users\" violates not-null constraint
+DETAIL:  Failing row contains (1, Test User, test@example.com, null, null, null, 2025-03-14 10:58:33, 2025-03-14 10:58:33). at /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php:410)
+[stacktrace]
+#0 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(410): PDOStatement->execute()
+#1 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(810): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('insert into \"us...', Array)
+#2 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('insert into \"us...', Array, Object(Closure))
+#3 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(396): Illuminate\\Database\\Connection->run('insert into \"us...', Array, Object(Closure))
+#4 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(383): Illuminate\\Database\\Connection->select('insert into \"us...', Array, false)
+#5 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/PostgresProcessor.php(24): Illuminate\\Database\\Connection->selectFromWriteConnection('insert into \"us...', Array)
+#6 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3767): Illuminate\\Database\\Query\\Processors\\PostgresProcessor->processInsertGetId(Object(Illuminate\\Database\\Query\\Builder), 'insert into \"us...', Array, 'id')
+#7 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(2141): Illuminate\\Database\\Query\\Builder->insertGetId(Array, 'id')
+#8 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1359): Illuminate\\Database\\Eloquent\\Builder->__call('insertGetId', Array)
+#9 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1324): Illuminate\\Database\\Eloquent\\Model->insertAndSetId(Object(Illuminate\\Database\\Eloquent\\Builder), Array)
+#10 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1163): Illuminate\\Database\\Eloquent\\Model->performInsert(Object(Illuminate\\Database\\Eloquent\\Builder))
+#11 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1128): Illuminate\\Database\\Eloquent\\Model->save()
+#12 /var/www/vendor/laravel/framework/src/Illuminate/Support/helpers.php(399): Illuminate\\Database\\Eloquent\\Builder->Illuminate\\Database\\Eloquent\\{closure}(Object(App\\Models\\User))
+#13 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1127): tap(Object(App\\Models\\User), Object(Closure))
+#14 /var/www/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create(Array)
+#15 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2372): Illuminate\\Database\\Eloquent\\Model->forwardCallTo(Object(Illuminate\\Database\\Eloquent\\Builder), 'create', Array)
+#16 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2384): Illuminate\\Database\\Eloquent\\Model->__call('create', Array)
+#17 /var/www/app/Http/Controllers/UserController.php(26): Illuminate\\Database\\Eloquent\\Model::__callStatic('create', Array)
+#18 /var/www/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(47): App\\Http\\Controllers\\UserController->createUser(Object(Illuminate\\Http\\Request))
+#19 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\UserController), 'createUser')
+#20 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php(212): Illuminate\\Routing\\Route->runController()
+#21 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(808): Illuminate\\Routing\\Route->run()
+#22 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#23 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#28 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#29 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#30 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#31 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#52 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#53 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#54 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(573): Illuminate\\Foundation\\Testing\\TestCase->call('POST', '/api/users', Array, Array, Array, Array, '{\"name\":\"Test U...')
+#55 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(411): Illuminate\\Foundation\\Testing\\TestCase->json('POST', '/api/users', Array, Array, 0)
+#56 /var/www/tests/Feature/UserControllerTest.php(20): Illuminate\\Foundation\\Testing\\TestCase->postJson('/api/users', Array)
+#57 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(1240): Tests\\Feature\\UserControllerTest->testCreateUser()
+#58 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\\Framework\\TestCase->runTest()
+#59 /var/www/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\\Framework\\TestCase->runBare()
+#60 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\\Framework\\TestRunner->run(Object(Tests\\Feature\\UserControllerTest))
+#61 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestCase->run()
+#62 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestSuite->run()
+#63 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestSuite->run()
+#64 /var/www/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\\Framework\\TestSuite->run()
+#65 /var/www/vendor/phpunit/phpunit/src/TextUI/Application.php(210): PHPUnit\\TextUI\\TestRunner->run(Object(PHPUnit\\TextUI\\Configuration\\Configuration), Object(PHPUnit\\Runner\\ResultCache\\DefaultResultCache), Object(PHPUnit\\Framework\\TestSuite))
+#66 /var/www/vendor/phpunit/phpunit/phpunit(104): PHPUnit\\TextUI\\Application->run(Array)
+#67 {main}
+"} 
+[2025-03-14 11:00:37] testing.ERROR: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "password" of relation "users" violates not-null constraint
+DETAIL:  Failing row contains (1, Test User, test@example.com, null, null, null, 2025-03-14 11:00:37, 2025-03-14 11:00:37). (Connection: pgsql, SQL: insert into "users" ("name", "email", "updated_at", "created_at") values (Test User, test@example.com, 2025-03-14 11:00:37, 2025-03-14 11:00:37) returning "id") {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23502): SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column \"password\" of relation \"users\" violates not-null constraint
+DETAIL:  Failing row contains (1, Test User, test@example.com, null, null, null, 2025-03-14 11:00:37, 2025-03-14 11:00:37). (Connection: pgsql, SQL: insert into \"users\" (\"name\", \"email\", \"updated_at\", \"created_at\") values (Test User, test@example.com, 2025-03-14 11:00:37, 2025-03-14 11:00:37) returning \"id\") at /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php:823)
+[stacktrace]
+#0 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('insert into \"us...', Array, Object(Closure))
+#1 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(396): Illuminate\\Database\\Connection->run('insert into \"us...', Array, Object(Closure))
+#2 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(383): Illuminate\\Database\\Connection->select('insert into \"us...', Array, false)
+#3 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/PostgresProcessor.php(24): Illuminate\\Database\\Connection->selectFromWriteConnection('insert into \"us...', Array)
+#4 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3767): Illuminate\\Database\\Query\\Processors\\PostgresProcessor->processInsertGetId(Object(Illuminate\\Database\\Query\\Builder), 'insert into \"us...', Array, 'id')
+#5 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(2141): Illuminate\\Database\\Query\\Builder->insertGetId(Array, 'id')
+#6 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1359): Illuminate\\Database\\Eloquent\\Builder->__call('insertGetId', Array)
+#7 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1324): Illuminate\\Database\\Eloquent\\Model->insertAndSetId(Object(Illuminate\\Database\\Eloquent\\Builder), Array)
+#8 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1163): Illuminate\\Database\\Eloquent\\Model->performInsert(Object(Illuminate\\Database\\Eloquent\\Builder))
+#9 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1128): Illuminate\\Database\\Eloquent\\Model->save()
+#10 /var/www/vendor/laravel/framework/src/Illuminate/Support/helpers.php(399): Illuminate\\Database\\Eloquent\\Builder->Illuminate\\Database\\Eloquent\\{closure}(Object(App\\Models\\User))
+#11 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1127): tap(Object(App\\Models\\User), Object(Closure))
+#12 /var/www/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create(Array)
+#13 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2372): Illuminate\\Database\\Eloquent\\Model->forwardCallTo(Object(Illuminate\\Database\\Eloquent\\Builder), 'create', Array)
+#14 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2384): Illuminate\\Database\\Eloquent\\Model->__call('create', Array)
+#15 /var/www/app/Http/Controllers/UserController.php(26): Illuminate\\Database\\Eloquent\\Model::__callStatic('create', Array)
+#16 /var/www/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(47): App\\Http\\Controllers\\UserController->createUser(Object(Illuminate\\Http\\Request))
+#17 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\UserController), 'createUser')
+#18 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php(212): Illuminate\\Routing\\Route->runController()
+#19 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(808): Illuminate\\Routing\\Route->run()
+#20 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#21 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#22 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#23 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#25 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#26 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#27 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#28 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#29 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#30 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#32 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#33 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#34 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#36 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#37 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#50 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#51 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#52 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(573): Illuminate\\Foundation\\Testing\\TestCase->call('POST', '/api/users', Array, Array, Array, Array, '{\"name\":\"Test U...')
+#53 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(411): Illuminate\\Foundation\\Testing\\TestCase->json('POST', '/api/users', Array, Array, 0)
+#54 /var/www/tests/Feature/UserControllerTest.php(20): Illuminate\\Foundation\\Testing\\TestCase->postJson('/api/users', Array)
+#55 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(1240): Tests\\Feature\\UserControllerTest->testCreateUser()
+#56 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\\Framework\\TestCase->runTest()
+#57 /var/www/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\\Framework\\TestCase->runBare()
+#58 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\\Framework\\TestRunner->run(Object(Tests\\Feature\\UserControllerTest))
+#59 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestCase->run()
+#60 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestSuite->run()
+#61 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestSuite->run()
+#62 /var/www/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\\Framework\\TestSuite->run()
+#63 /var/www/vendor/phpunit/phpunit/src/TextUI/Application.php(210): PHPUnit\\TextUI\\TestRunner->run(Object(PHPUnit\\TextUI\\Configuration\\Configuration), Object(PHPUnit\\Runner\\ResultCache\\DefaultResultCache), Object(PHPUnit\\Framework\\TestSuite))
+#64 /var/www/vendor/phpunit/phpunit/phpunit(104): PHPUnit\\TextUI\\Application->run(Array)
+#65 {main}
+
+[previous exception] [object] (PDOException(code: 23502): SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column \"password\" of relation \"users\" violates not-null constraint
+DETAIL:  Failing row contains (1, Test User, test@example.com, null, null, null, 2025-03-14 11:00:37, 2025-03-14 11:00:37). at /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php:410)
+[stacktrace]
+#0 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(410): PDOStatement->execute()
+#1 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(810): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('insert into \"us...', Array)
+#2 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(777): Illuminate\\Database\\Connection->runQueryCallback('insert into \"us...', Array, Object(Closure))
+#3 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(396): Illuminate\\Database\\Connection->run('insert into \"us...', Array, Object(Closure))
+#4 /var/www/vendor/laravel/framework/src/Illuminate/Database/Connection.php(383): Illuminate\\Database\\Connection->select('insert into \"us...', Array, false)
+#5 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/PostgresProcessor.php(24): Illuminate\\Database\\Connection->selectFromWriteConnection('insert into \"us...', Array)
+#6 /var/www/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(3767): Illuminate\\Database\\Query\\Processors\\PostgresProcessor->processInsertGetId(Object(Illuminate\\Database\\Query\\Builder), 'insert into \"us...', Array, 'id')
+#7 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(2141): Illuminate\\Database\\Query\\Builder->insertGetId(Array, 'id')
+#8 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1359): Illuminate\\Database\\Eloquent\\Builder->__call('insertGetId', Array)
+#9 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1324): Illuminate\\Database\\Eloquent\\Model->insertAndSetId(Object(Illuminate\\Database\\Eloquent\\Builder), Array)
+#10 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1163): Illuminate\\Database\\Eloquent\\Model->performInsert(Object(Illuminate\\Database\\Eloquent\\Builder))
+#11 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1128): Illuminate\\Database\\Eloquent\\Model->save()
+#12 /var/www/vendor/laravel/framework/src/Illuminate/Support/helpers.php(399): Illuminate\\Database\\Eloquent\\Builder->Illuminate\\Database\\Eloquent\\{closure}(Object(App\\Models\\User))
+#13 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1127): tap(Object(App\\Models\\User), Object(Closure))
+#14 /var/www/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create(Array)
+#15 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2372): Illuminate\\Database\\Eloquent\\Model->forwardCallTo(Object(Illuminate\\Database\\Eloquent\\Builder), 'create', Array)
+#16 /var/www/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(2384): Illuminate\\Database\\Eloquent\\Model->__call('create', Array)
+#17 /var/www/app/Http/Controllers/UserController.php(26): Illuminate\\Database\\Eloquent\\Model::__callStatic('create', Array)
+#18 /var/www/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(47): App\\Http\\Controllers\\UserController->createUser(Object(Illuminate\\Http\\Request))
+#19 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php(266): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\UserController), 'createUser')
+#20 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Route.php(212): Illuminate\\Routing\\Route->runController()
+#21 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(808): Illuminate\\Routing\\Route->run()
+#22 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#23 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(51): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#24 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#25 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#26 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(807): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#27 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(786): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#28 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(750): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#29 /var/www/vendor/laravel/framework/src/Illuminate/Routing/Router.php(739): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#30 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(201): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#31 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(170): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#32 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#33 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#34 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#35 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#36 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/TrimStrings.php(51): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#37 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#38 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#39 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/PreventRequestsDuringMaintenance.php(110): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#42 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#43 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\HandleCors->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#44 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/TrustProxies.php(58): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#45 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/InvokeDeferredCallbacks.php(22): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Foundation\\Http\\Middleware\\InvokeDeferredCallbacks->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#48 /var/www/vendor/laravel/framework/src/Illuminate/Http/Middleware/ValidatePathEncoding.php(26): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#49 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(209): Illuminate\\Http\\Middleware\\ValidatePathEncoding->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#50 /var/www/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(127): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#51 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(176): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#52 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(145): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#53 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(607): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#54 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(573): Illuminate\\Foundation\\Testing\\TestCase->call('POST', '/api/users', Array, Array, Array, Array, '{\"name\":\"Test U...')
+#55 /var/www/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/MakesHttpRequests.php(411): Illuminate\\Foundation\\Testing\\TestCase->json('POST', '/api/users', Array, Array, 0)
+#56 /var/www/tests/Feature/UserControllerTest.php(20): Illuminate\\Foundation\\Testing\\TestCase->postJson('/api/users', Array)
+#57 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(1240): Tests\\Feature\\UserControllerTest->testCreateUser()
+#58 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(514): PHPUnit\\Framework\\TestCase->runTest()
+#59 /var/www/vendor/phpunit/phpunit/src/Framework/TestRunner/TestRunner.php(87): PHPUnit\\Framework\\TestCase->runBare()
+#60 /var/www/vendor/phpunit/phpunit/src/Framework/TestCase.php(361): PHPUnit\\Framework\\TestRunner->run(Object(Tests\\Feature\\UserControllerTest))
+#61 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestCase->run()
+#62 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestSuite->run()
+#63 /var/www/vendor/phpunit/phpunit/src/Framework/TestSuite.php(369): PHPUnit\\Framework\\TestSuite->run()
+#64 /var/www/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(64): PHPUnit\\Framework\\TestSuite->run()
+#65 /var/www/vendor/phpunit/phpunit/src/TextUI/Application.php(210): PHPUnit\\TextUI\\TestRunner->run(Object(PHPUnit\\TextUI\\Configuration\\Configuration), Object(PHPUnit\\Runner\\ResultCache\\DefaultResultCache), Object(PHPUnit\\Framework\\TestSuite))
+#66 /var/www/vendor/phpunit/phpunit/phpunit(104): PHPUnit\\TextUI\\Application->run(Array)
+#67 {main}
+"} 
+[2025-03-17 11:23:20] local.ERROR: Command "make:conttroller" is not defined.
+
+Did you mean one of these?
+    make:cache-table
+    make:cast
+    make:channel
+    make:class
+    make:command
+    make:component
+    make:controller
+    make:enum
+    make:event
+    make:exception
+    make:factory
+    make:interface
+    make:job
+    make:job-middleware
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:notifications-table
+    make:observer
+    make:policy
+    make:provider
+    make:queue-batches-table
+    make:queue-failed-table
+    make:queue-table
+    make:request
+    make:resource
+    make:rule
+    make:scope
+    make:seeder
+    make:session-table
+    make:test
+    make:trait
+    make:view {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:conttroller\" is not defined.
+
+Did you mean one of these?
+    make:cache-table
+    make:cast
+    make:channel
+    make:class
+    make:command
+    make:component
+    make:controller
+    make:enum
+    make:event
+    make:exception
+    make:factory
+    make:interface
+    make:job
+    make:job-middleware
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:notifications-table
+    make:observer
+    make:policy
+    make:provider
+    make:queue-batches-table
+    make:queue-failed-table
+    make:queue-table
+    make:request
+    make:resource
+    make:rule
+    make:scope
+    make:seeder
+    make:session-table
+    make:test
+    make:trait
+    make:view at /Users/fabietto/Blog/vendor/symfony/console/Application.php:726)
+[stacktrace]
+#0 /Users/fabietto/Blog/vendor/symfony/console/Application.php(284): Symfony\\Component\\Console\\Application->find('make:conttrolle...')
+#1 /Users/fabietto/Blog/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /Users/fabietto/Blog/artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#5 {main}
+"} 
+[2025-03-17 11:23:33] local.ERROR: Command "make:conttroller" is not defined.
+
+Did you mean one of these?
+    make:cache-table
+    make:cast
+    make:channel
+    make:class
+    make:command
+    make:component
+    make:controller
+    make:enum
+    make:event
+    make:exception
+    make:factory
+    make:interface
+    make:job
+    make:job-middleware
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:notifications-table
+    make:observer
+    make:policy
+    make:provider
+    make:queue-batches-table
+    make:queue-failed-table
+    make:queue-table
+    make:request
+    make:resource
+    make:rule
+    make:scope
+    make:seeder
+    make:session-table
+    make:test
+    make:trait
+    make:view {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:conttroller\" is not defined.
+
+Did you mean one of these?
+    make:cache-table
+    make:cast
+    make:channel
+    make:class
+    make:command
+    make:component
+    make:controller
+    make:enum
+    make:event
+    make:exception
+    make:factory
+    make:interface
+    make:job
+    make:job-middleware
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:notifications-table
+    make:observer
+    make:policy
+    make:provider
+    make:queue-batches-table
+    make:queue-failed-table
+    make:queue-table
+    make:request
+    make:resource
+    make:rule
+    make:scope
+    make:seeder
+    make:session-table
+    make:test
+    make:trait
+    make:view at /Users/fabietto/Blog/vendor/symfony/console/Application.php:726)
+[stacktrace]
+#0 /Users/fabietto/Blog/vendor/symfony/console/Application.php(284): Symfony\\Component\\Console\\Application->find('make:conttrolle...')
+#1 /Users/fabietto/Blog/vendor/symfony/console/Application.php(193): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 /Users/fabietto/Blog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 /Users/fabietto/Blog/artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#5 {main}
+"} 
