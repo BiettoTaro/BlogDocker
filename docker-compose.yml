@@ -9,7 +9,7 @@ services:
       - "8000:9000"
     environment:
       DB_CONNECTION: pgsql
-      DB_HOST: host.docker.internal
+      DB_HOST: db
       DB_PORT: 5432
       DB_DATABASE: blog
       DB_USERNAME: fabietto
@@ -21,7 +21,6 @@ services:
 
   db:
     image: postgres:latest
-    container_name: postgres_db
     environment:
       POSTGRES_DB: blog
       POSTGRES_USER: fabietto

@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
+            $table->morphs('commentable');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->text('body');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
         });
     }
 

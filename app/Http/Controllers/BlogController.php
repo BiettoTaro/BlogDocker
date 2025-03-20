@@ -29,6 +29,7 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
+
         $validated = $request->validate([
             'title' => 'required|string|max:255',
             'content' => 'required|string',
@@ -49,6 +50,7 @@ class BlogController extends Controller
     public function show(string $id)
     {
         $blog = Blog::with('author', 'comments')->findOrFail($id);
+        return response()->json($blog);
     }
 
     /**

@@ -44,4 +44,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    // comments on the user profile
+    public function comments()
+    {
+        return $this->morphMany(Comment::class, 'commentable');
+    }
 }
