@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
 
 class UserController extends Controller
@@ -24,12 +25,14 @@ class UserController extends Controller
         $validated = $request->validate([
             'name' => 'required|string',
             'email' => 'required|email|unique:users,email',
+            'password' => 'required|min:8',
             
         ]);
 
         $user = User::create([
             'name' => $validated['name'],
-            'email' => $validated['email']
+            'email' => $validated['email'],
+            'password' => Hash::make($request->password)
         ]);
 
         return response()->json($user, 201);
@@ -45,13 +48,15 @@ class UserController extends Controller
     {
         // Validate input
         $validated = $request->validate([
-            'name' => 'required|string',
-            'email' => 'required|email|unique:users,email' 
+            'name' => 'sometimes|string',
+            'email' => 'sometimes|email|unique:users,email',
+            'password' => 'sometimes|min:8',
         ]);
 
         $user->update([
             'name' => $validated['name'] ?? $user->name,
-            'email' => $validated['email'] ?? $user->email
+            'email' => $validated['email'] ?? $user->email,
+            'password' => $validated['password'] ?? Hash::make($request->password),
         ]);
 
         return response()->json($user, 200);

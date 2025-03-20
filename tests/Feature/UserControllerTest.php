@@ -15,16 +15,23 @@ class UserControllerTest extends TestCase
         $data = [
             'name'  => 'Test User',
             'email' => 'test@example.com',
+            'password' => 'secret999',
         ];
 
         $response = $this->postJson('/api/users', $data);
 
         // Check that the user was created and the response status is 201
         $response->assertStatus(201)
-                 ->assertJsonFragment($data);
+                 ->assertJsonFragment([
+                    'name'  => 'Test User',
+                    'email' => 'test@example.com',
+                 ]);
 
         // Verify the user exists in the database
-        $this->assertDatabaseHas('users', $data);
+        $this->assertDatabaseHas('users', [
+            'name'  => 'Test User',
+            'email' => 'test@example.com',
+        ]);
     }
 
     public function testGetAllUsers()
