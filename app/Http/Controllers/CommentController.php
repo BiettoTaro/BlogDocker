@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\SendCommentNotificationJob;
 use App\Models\Comment;
 use App\Models\Blog;
 use App\Models\User;
@@ -56,6 +57,9 @@ class CommentController extends Controller
             'commentable_type' => $validated['commentable_type'],
             'user_id' => Auth::id(),
         ]);
+
+        // Dispatch the job to send the email notification
+        dispatch((new SendCommentNotificationJob($comment)));
 
         return response()->json($comment, 201);
     }

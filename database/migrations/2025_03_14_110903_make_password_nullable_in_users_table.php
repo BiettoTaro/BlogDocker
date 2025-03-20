@@ -20,4 +20,4 @@ class MakePasswordNullableInUsersTable extends Migration
             $table->string('password')->nullable(false)->change();
         });
     }
-}
+} 

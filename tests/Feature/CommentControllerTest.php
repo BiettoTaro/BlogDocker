@@ -12,23 +12,17 @@ class CommentControllerTest extends TestCase
 {
     use RefreshDatabase;
 
-    /**
-     * Test that an authenticated user can create a comment on a Blog.
-     *
-     * Note: This example assumes you have a Blog model or that you’re using a placeholder ID.
-     * If you don’t have a Blog model, you might simulate commenting on a user instead.
-     */
+    
     public function test_authenticated_user_can_create_comment_on_blog()
     {
         // Create a user and simulate authentication.
         $user = User::factory()->create();
         $this->actingAs($user);
+        $blog = Blog::factory()->create(['user_id' => $user->id]);
 
-        // For this test, we'll assume we're commenting on a Blog with id 1.
-        // (Replace with creating a Blog instance if you have a Blog factory/model.)
         $data = [
             'body'             => 'This is a comment on a blog.',
-            'commentable_id'   => 1,
+            'commentable_id'   => $blog->id,
             'commentable_type' => Blog::class,
         ];
 
@@ -37,16 +31,16 @@ class CommentControllerTest extends TestCase
         $response->assertStatus(201)
                  ->assertJsonFragment([
                      'body'             => 'This is a comment on a blog.',
-                     'commentable_id'   => 1,
-                     'commentable_type' => 'App\Models\Blog',
+                     'commentable_id'   => $blog->id,
+                     'commentable_type' => Blog::class,
                      'user_id'          => $user->id,
                  ]);
 
         // Confirm the comment was stored in the database.
         $this->assertDatabaseHas('comments', [
             'body'             => 'This is a comment on a blog.',
-            'commentable_id'   => 1,
-            'commentable_type' => 'App\Models\Blog',
+            'commentable_id'   => $blog->id,
+            'commentable_type' => Blog::class,
             'user_id'          => $user->id,
         ]);
     }
@@ -92,10 +86,13 @@ class CommentControllerTest extends TestCase
      */
     public function test_unauthenticated_user_cannot_create_comment()
     {
+        $user = User::factory()->create();
+        $blog = Blog::factory()->create(['user_id' => $user->id]);
+
         $data = [
             'body'             => 'This comment should not be created.',
-            'commentable_id'   => 1,
-            'commentable_type' => 'App\Models\Blog',
+            'commentable_id'   => $blog->id,
+            'commentable_type' => Blog::class,
         ];
 
         $response = $this->postJson('/api/comments', $data);
