@@ -4,10 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Blog;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class BlogController extends Controller
 {
+
+    public function __construct()
+    {
+        // Protect the store method so that only authenticated users can create a blog
+        $this->middleware('auth')->only('store');
+    }
+
     /**
      * Display a listing of the resource.
      */
@@ -28,21 +36,23 @@ class BlogController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-
-        $validated = $request->validate([
-            'title' => 'required|string|max:255',
-            'content' => 'required|string',
-        ]);
-
-        $blog = Blog::create([
-            'user_id' => Auth::id(),
-            'title' => $validated['title'],
-            'content' => $validated['content'],
-        ]);
-
-        return response()->json($blog, 201);
+{
+    // If no user is authenticated, immediately return a 401 response.
+    if (!Auth::check()) {
+        return response()->json(['error' => 'Unauthenticated'], 401);
     }
+
+    $validated = $request->validate([
+        'title'   => 'required|string|max:255',
+        'content' => 'required|string',
+    ]);
+
+    
+    $blog = Auth::user()->blogs()->create($validated);
+
+    return response()->json($blog, 201);
+}
+
 
     /**
      * Display the specified resource.

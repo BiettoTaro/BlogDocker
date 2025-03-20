@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
@@ -15,12 +16,15 @@ class UserController extends Controller
         return response()->json($users, 200);
     }
 
+    
+
     public function createUser(Request $request)
     {
         // Validate input
         $validated = $request->validate([
             'name' => 'required|string',
-            'email' => 'required|email|unique:users,email'
+            'email' => 'required|email|unique:users,email',
+            
         ]);
 
         $user = User::create([

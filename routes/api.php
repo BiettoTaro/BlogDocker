@@ -22,6 +22,6 @@ Route::delete('/blogs/{id}', [BlogController::class, 'destroy']);
 // Comment route
 Route::post('/comments', [CommentController::class, 'store']);
 
-Route::middleware('auth:api')->group(function () {
-    Route::post('/blogs', [BlogController::class, 'store']);
+Route::middleware('auth')->group(function () {
+    Route::post('/comments', [CommentController::class, 'store']);
 });

@@ -15,11 +15,13 @@ class BlogControllerTest extends TestCase
     /** @test */
     public function guest_cannot_create_blogs()
     {
-        $response = $this->postJson('/api/blogs',[
-            'title' => 'My First Blog',
+        $data = [
+            'title'   => 'My First Blog',
             'content' => 'Some content',
-        ]);
+        ];
 
+        // Since no user is authenticated, this should be intercepted by the auth middleware.
+        $response = $this->postJson('/api/blogs', $data);
 
         $response->assertStatus(401);
     }
@@ -27,18 +29,27 @@ class BlogControllerTest extends TestCase
     /** @test */
     public function auth_user_can_create_blogs()
     {
+        // Create an authenticated user
         $user = User::factory()->create();
-        $this->actingAs($user, 'api');
+        $this->actingAs($user);
 
-        $response = $this->postJson('/api/blogs', [
-            'title' => 'My First Blog',
+        $data = [
+            'title'   => 'My First Blog',
             'content' => 'Some content',
-            'user_id' => $user->id,
-        ]);
+        ];
 
-        $response->assertStatus(201);
+        $response = $this->postJson('/api/blogs', $data);
+
+        $response->assertStatus(201)
+                 ->assertJsonFragment([
+                     'title'   => 'My First Blog',
+                     'content' => 'Some content',
+                     'user_id' => $user->id,  // Check that the blog is associated with the authenticated user
+                 ]);
+
+        // Also confirm in the database that the blog exists.
         $this->assertDatabaseHas('blogs', [
-            'title' => 'My First Blog',
+            'title'   => 'My First Blog',
             'content' => 'Some content',
             'user_id' => $user->id,
         ]);
@@ -80,7 +91,7 @@ class BlogControllerTest extends TestCase
     public function it_deletes_blogs()
     {
         $user = User::factory()->create();
-        $blog = Blog::create()->create(['user_id' => $user->id]);
+        $blog = Blog::factory()->create(['user_id' => $user->id]);
 
         $this->actingAs($user);
 

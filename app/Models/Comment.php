@@ -9,7 +9,7 @@ class Comment extends Model
 {
     use HasFactory;
     
-    protected $fillable = ['body', 'user_id'];
+    protected $fillable = ['body', 'commentable_id', 'commentable_type', 'user_id'];
 
     // Defines the polymorphic relation (could be a Blog or a User)
     public function commentable()

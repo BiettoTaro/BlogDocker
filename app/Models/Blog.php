@@ -2,24 +2,23 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class Blog extends Model
 {
-
     use HasFactory;
 
-    protected $fillable = ['user_id', 'title', 'content'];
+    // Only allow title and content to be mass-assigned.
+    protected $fillable = ['title', 'content', 'user_id'];
 
-    // A blog belongs to a user (the author)
     public function author()
     {
         return $this->belongsTo(User::class, 'user_id');
     }
 
-    // A blog can have many comments (polymorphic relation)
-    public function comments()
+    public function comments(): MorphMany
     {
         return $this->morphMany(Comment::class, 'commentable');
     }

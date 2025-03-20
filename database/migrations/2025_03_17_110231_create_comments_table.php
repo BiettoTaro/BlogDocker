@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->morphs('commentable');
-            $table->unsignedBigInteger('user_id')->nullable();
+            // Create the user_id column as a foreign key.
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->unsignedBigInteger('commentable_id');
+            $table->string('commentable_type');
             $table->text('body');
             $table->timestamps();
-
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');
         });
     }
 

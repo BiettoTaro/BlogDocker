@@ -10,12 +10,19 @@ use Illuminate\Support\Facades\Auth;
 
 class CommentController extends Controller
 {
+
+    // Apply auth middleware
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return response()->json(Comment::with(['user', 'commentable'])->get(), 200);
     }
 
     /**
@@ -32,9 +39,9 @@ class CommentController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'commentable_type' => 'required|string',
-            'commentable_id' => 'required| integer',
             'body' => 'required|string',
+            'commentable_id' => 'required|integer',
+            'commentable_type' => 'required|string|in:App\Models\Blog,App\Models\User',
         ]);
 
         // Define allowed commentable types for security reason
@@ -43,24 +50,12 @@ class CommentController extends Controller
             'user' => User::class,
         ];
 
-        if (!isset($allowedTypes[$validated['commentable_type']])) {
-            return response()->json(['error' => 'Invalid commentable type.'], 400);
-        }
-
-        $modelClass = $allowedTypes[$validated['commentable_type']];
-
-        // Find the commentable entity (blog or user)
-        $commentable = $modelClass::findOrFail($validated['commentable_id']);
-
-        // Prepare the comment data
-        $commentData = [
-            'body' => $validated['body'], 
-            // If the user is authenticated, record trhe user_id; otherwise, null (visitor comment)
-            'user_id' => Auth::check() ? Auth::id() : null,
-        ];
-
-        // Create comment using the polymorphic relationship
-        $comment = $commentable->comments()->create($commentData);
+        $comment = Comment::create([
+            'body' => $validated['body'],
+            'commentable_id' => $validated['commentable_id'],
+            'commentable_type' => $validated['commentable_type'],
+            'user_id' => Auth::id(),
+        ]);
 
         return response()->json($comment, 201);
     }
