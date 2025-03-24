@@ -7,6 +7,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\Models\Blog;
 use App\Models\User;
+use Laravel\Sanctum\Sanctum;
 
 class BlogControllerTest extends TestCase
 {
@@ -59,6 +60,8 @@ class BlogControllerTest extends TestCase
     public function it_shows_blogs()
     {
         $user = User::factory()->create();
+        Sanctum::actingAs($user);
+        
         $blog = Blog::factory()->create(['user_id' => $user->id]);
 
         $response = $this->getJson("/api/blogs/{$blog->id}");

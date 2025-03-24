@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y \
     zip \
     unzip
 
-RUN docker-php-ext-install pdo_pgsql
+# Install PHP extensions: pdo_pgsql and pcntl
+RUN docker-php-ext-install pdo_pgsql pcntl
 
 # Install Composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \

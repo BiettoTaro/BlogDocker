@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use App\Models\User;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Laravel\Sanctum\Sanctum;
 
 class UserControllerTest extends TestCase
 {
@@ -36,8 +37,12 @@ class UserControllerTest extends TestCase
 
     public function testGetAllUsers()
     {
+
+        $user = User::factory()->create();
+        Sanctum::actingAs($user);
+
         // Create 3 users using the factory
-        User::factory()->count(3)->create();
+        User::factory()->count(2)->create();
 
         $response = $this->getJson('/api/users');
 
@@ -50,6 +55,7 @@ class UserControllerTest extends TestCase
     public function testGetUser()
     {
         $user = User::factory()->create();
+        Sanctum::actingAs($user);
 
         $response = $this->getJson("/api/users/{$user->id}");
 
@@ -63,6 +69,7 @@ class UserControllerTest extends TestCase
     public function testUpdateUser()
     {
         $user = User::factory()->create();
+        Sanctum::actingAs($user);
 
         $updateData = [
             'name'  => 'Updated Name',
@@ -81,6 +88,7 @@ class UserControllerTest extends TestCase
     public function testDeleteUser()
     {
         $user = User::factory()->create();
+        Sanctum::actingAs($user);
 
         $response = $this->deleteJson("/api/users/{$user->id}");
 
