@@ -19,6 +19,10 @@ services:
       - db
     volumes:
       - ./:/var/www
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
 
   db:
     image: postgres:latest
