@@ -6,9 +6,13 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\AuthController;
 
+
 // Public routes
 Route::post('/users', [UserController::class, 'createUser']);
 Route::post('/login', [AuthController::class, 'login']);
+
+
+
 
 
 
