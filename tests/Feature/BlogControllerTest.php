@@ -96,12 +96,12 @@ class BlogControllerTest extends TestCase
         $user = User::factory()->create();
         $blog = Blog::factory()->create(['user_id' => $user->id]);
 
-        $this->actingAs($user);
+        Sanctum::actingAs($user);
 
         $response = $this->deleteJson("/api/blogs/{$blog->id}");
         $response->assertStatus(204);
 
-        $this->assertDatabaseMissing('blogs', [
+        $this->assertSoftDeleted('blogs', [
             'id' => $blog->id,
         ]);
     }

@@ -17,6 +17,13 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php composer-setup.php --install-dir=/usr/local/bin --filename=composer \
     && php -r "unlink('composer-setup.php');"
 
+# Install system dependencies including libexif-dev
+RUN apt-get update && apt-get install -y libexif-dev
+
+# Install the exif extension
+RUN docker-php-ext-install exif
+
+
 WORKDIR /var/www
 
 # Copy application files

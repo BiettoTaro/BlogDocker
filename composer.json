@@ -13,7 +13,8 @@
         "laravel/tinker": "^2.10.1",
         "mll-lab/laravel-graphiql": "^3.3",
         "mll-lab/laravel-graphql-playground": "^1.1",
-        "nuwave/lighthouse": "^6.53"
+        "nuwave/lighthouse": "^6.53",
+        "spatie/laravel-medialibrary": "^11.12"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

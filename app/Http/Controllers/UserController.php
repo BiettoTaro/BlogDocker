@@ -62,10 +62,27 @@ class UserController extends Controller
         return response()->json($user, 200);
     }
 
+    // Soft delete
     public function deleteUser(User $user)
     {
         $user->delete();
-        return response()->json(['message' => 'User deleted'], 200);
+        return response()->json(['message' => 'User soft deleted'], 204);
+    }
+
+    public function restore($id)
+    {
+        $user = User::withTrashed()->findOrFail($id);
+        $user->restore();
+        return response()->json(['message' => 'User restored'], 200);
+    }
+
+    // Hard delete
+    public function forceDelete($id)
+    {
+        $user = User::withTrashed()->findOrFail($id);
+        $user-> forceDelete();
+
+        return response()->json(['message' => 'User permanently deleted'], 204);
     }
 
 

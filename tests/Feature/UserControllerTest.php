@@ -85,17 +85,68 @@ class UserControllerTest extends TestCase
         $this->assertDatabaseHas('users', array_merge(['id' => $user->id], $updateData));
     }
 
-    public function testDeleteUser()
+    public function test_soft_delete_user()
     {
+
+        $admin = User::factory()->create();
+        Sanctum::actingAs($admin);
+
         $user = User::factory()->create();
-        Sanctum::actingAs($user);
 
+        // Trigger the soft delete action, e.g. via a DELETE request.
         $response = $this->deleteJson("/api/users/{$user->id}");
+        $response->assertStatus(204);
 
-        $response->assertStatus(200)
-                 ->assertJsonFragment(['message' => 'User deleted']);
+        // Assert that the user has been soft deleted.
+        $this->assertSoftDeleted('users', ['id' => $user->id]);
+    }
 
-        // Ensure the user is no longer in the database
+    public function test_restore_user()
+    {
+
+        // Create an acting (admin) user and authenticate.
+        $admin = User::factory()->create();
+        Sanctum::actingAs($admin);
+
+        $user = User::factory()->create();
+        $user->delete();
+
+        // Ensure the user is soft deleted.
+        $this->assertSoftDeleted('users', ['id' => $user->id]);
+
+        // Restore the user.
+        $response = $this->postJson("/api/users/{$user->id}/restore");
+        $response = $this->getJson("/api/users/{$user->id}");
+
+        // Check that the user is no longer soft deleted.
+        $this->assertDatabaseHas('users', [
+            'id' => $user->id,
+            'deleted_at' => null
+        ]);
+    }
+
+    public function test_force_delete_user()
+    {
+
+        // Create an acting (admin) user and authenticate.
+        $admin = User::factory()->create();
+        Sanctum::actingAs($admin);
+
+        $user = User::factory()->create();
+        $user->delete();
+
+        // Ensure the user is soft deleted first.
+        $this->assertSoftDeleted('users', ['id' => $user->id]);
+
+        
+
+        // Force delete the user.
+        $response = $this->deleteJson("/api/users/{$user->id}/force-delete");
+        $response->assertStatus(204);
+
+        // Assert that the user is completely removed.
         $this->assertDatabaseMissing('users', ['id' => $user->id]);
     }
+
+
 }

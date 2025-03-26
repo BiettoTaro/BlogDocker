@@ -90,4 +90,11 @@
       10 => 'Nuwave\\Lighthouse\\Validation\\ValidationServiceProvider',
     ),
   ),
+  'spatie/laravel-medialibrary' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Spatie\\MediaLibrary\\MediaLibraryServiceProvider',
+    ),
+  ),
 );

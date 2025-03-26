@@ -95,7 +95,22 @@ class BlogController extends Controller
     {
         $blog = Blog::findOrFail($id);
         $blog->delete();
+        return response()->json(['message' => 'Blog soft deleted'], 204);
+    }
 
-        return response()->json(null, 204);
+    public function restore($id)
+    {
+        $blog = Blog::withTrashed()->findOrFail($id);
+        $blog->restore();
+        return response()->json(['message' => 'Blog restored'], 200);
+    }
+
+    // Hard delete
+    public function forceDelete($id)
+    {
+        $blog = Blog::withTrashed()->findOrFail($id);
+        $blog-> forceDelete();
+
+        return response()->json(['message' => 'Blog permanently deleted'], 204);
     }
 }

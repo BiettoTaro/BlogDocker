@@ -45,8 +45,9 @@
     41 => 'Nuwave\\Lighthouse\\SoftDeletes\\SoftDeletesServiceProvider',
     42 => 'Nuwave\\Lighthouse\\Testing\\TestingServiceProvider',
     43 => 'Nuwave\\Lighthouse\\Validation\\ValidationServiceProvider',
-    44 => 'App\\Providers\\AppServiceProvider',
-    45 => 'App\\Providers\\HorizonServiceProvider',
+    44 => 'Spatie\\MediaLibrary\\MediaLibraryServiceProvider',
+    45 => 'App\\Providers\\AppServiceProvider',
+    46 => 'App\\Providers\\HorizonServiceProvider',
   ),
   'eager' => 
   array (
@@ -79,8 +80,9 @@
     26 => 'Nuwave\\Lighthouse\\SoftDeletes\\SoftDeletesServiceProvider',
     27 => 'Nuwave\\Lighthouse\\Testing\\TestingServiceProvider',
     28 => 'Nuwave\\Lighthouse\\Validation\\ValidationServiceProvider',
-    29 => 'App\\Providers\\AppServiceProvider',
-    30 => 'App\\Providers\\HorizonServiceProvider',
+    29 => 'Spatie\\MediaLibrary\\MediaLibraryServiceProvider',
+    30 => 'App\\Providers\\AppServiceProvider',
+    31 => 'App\\Providers\\HorizonServiceProvider',
   ),
   'deferred' => 
   array (
