@@ -1,4 +1,11 @@
 <?php return array (
+  'laravel/breeze' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Laravel\\Breeze\\BreezeServiceProvider',
+    ),
+  ),
   'laravel/horizon' => 
   array (
     'aliases' => 
@@ -88,6 +95,13 @@
       8 => 'Nuwave\\Lighthouse\\SoftDeletes\\SoftDeletesServiceProvider',
       9 => 'Nuwave\\Lighthouse\\Testing\\TestingServiceProvider',
       10 => 'Nuwave\\Lighthouse\\Validation\\ValidationServiceProvider',
+    ),
+  ),
+  'pestphp/pest-plugin-laravel' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Pest\\Laravel\\PestServiceProvider',
     ),
   ),
   'spatie/laravel-medialibrary' => 

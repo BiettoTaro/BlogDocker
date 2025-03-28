@@ -5,11 +5,14 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BreezeAuthController;
 
 
 // Public routes
 Route::post('/users', [UserController::class, 'createUser']);
 Route::post('/login', [AuthController::class, 'login']);
+Route::post('/login', [BreezeAuthController::class, 'login']);
+Route::post('/register', [BreezeAuthController::class, 'register']);
 
 
 
@@ -40,4 +43,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::delete('/comments/{id}', [CommentController::class, 'destroy']);
     Route::post('/comments/{id}/restore', [CommentController::class, 'restore']);
     Route::delete('/comments/{id}/force-delete', [CommentController::class, 'forceDelete']);
+
+    // Breeze Auth route
+    Route::post('/logout', [BreezeAuthController::class, 'logout']);
 });
