@@ -42,8 +42,8 @@
 
 
 
-# Define Post type
-type Post {
+# Define Blog type
+type Blog {
   id: ID!
   title: String!
   content: String!
@@ -53,13 +53,13 @@ type Post {
 
 # Queries for fetching posts
 type Query {
-  posts: [Post!]! @all
-  post(id: ID!): Post @find
+  posts: [Blog!]! @all
+  post(id: ID!): Blog @find
 }
 
 # Mutations for creating, updating and deleting posts
 type Mutation {
-  createPost(title: String!, content: String!): Post @create
-  updatePost(id: ID!, title: String, content: String): Post @update
-  deletePost(id: ID!): Post @delete
+  createPost(title: String!, content: String!): Blog @create
+  updatePost(id: ID!, title: String, content: String): Blog @update
+  deletePost(id: ID!): Blog @delete
 }

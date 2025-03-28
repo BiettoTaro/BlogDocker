@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class BlogController extends Controller
 {
@@ -22,6 +23,7 @@ class BlogController extends Controller
     public function index()
     {
         $blogs = Blog::with('author', 'comments')->get();
+        return response()->json($blogs);
     }
 
     /**
@@ -78,6 +80,8 @@ class BlogController extends Controller
     {
         $blog = Blog::findOrFail($id);
 
+        $this->authorize('update', $blog);
+
         $validated = $request->validate([
             'title' => 'sometimes|required|string|max:255',
             'content' => 'sometimes|required|string',
@@ -94,6 +98,10 @@ class BlogController extends Controller
     public function destroy(string $id)
     {
         $blog = Blog::findOrFail($id);
+
+        $this->authorize('delete', $blog);
+
+
         $blog->delete();
         return response()->json(['message' => 'Blog soft deleted'], 204);
     }
@@ -101,6 +109,9 @@ class BlogController extends Controller
     public function restore($id)
     {
         $blog = Blog::withTrashed()->findOrFail($id);
+
+        $this->authorize('restore', $blog);
+
         $blog->restore();
         return response()->json(['message' => 'Blog restored'], 200);
     }
@@ -109,6 +120,8 @@ class BlogController extends Controller
     public function forceDelete($id)
     {
         $blog = Blog::withTrashed()->findOrFail($id);
+        $this->authorize('forceDelete', $blog);
+
         $blog-> forceDelete();
 
         return response()->json(['message' => 'Blog permanently deleted'], 204);

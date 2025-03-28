@@ -94,6 +94,8 @@ class CommentController extends Controller
     public function destroy(string $id)
     {
         $comment = Comment::findOrFail($id);
+        $this->authorize('update', $comment);
+        
         $comment->delete();
         return response()->json(['message' => 'Comment soft deleted'], 200);
     }
@@ -101,6 +103,8 @@ class CommentController extends Controller
     public function restore($id)
     {
         $comment = Comment::withTrashed()->findOrFail($id);
+        $this->authorize('update', $comment);
+
         $comment->restore();
         return response()->json(['message' => 'comment restored'], 200);
     }
@@ -109,6 +113,8 @@ class CommentController extends Controller
     public function forceDelete($id)
     {
         $comment = Comment::withTrashed()->findOrFail($id);
+        $this->authorize('update', $comment);
+        
         $comment-> forceDelete();
 
         return response()->json(['message' => 'comment permanently deleted'], 200);

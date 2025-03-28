@@ -49,7 +49,8 @@
     45 => 'Pest\\Laravel\\PestServiceProvider',
     46 => 'Spatie\\MediaLibrary\\MediaLibraryServiceProvider',
     47 => 'App\\Providers\\AppServiceProvider',
-    48 => 'App\\Providers\\HorizonServiceProvider',
+    48 => 'App\\Providers\\AuthServiceProvider',
+    49 => 'App\\Providers\\HorizonServiceProvider',
   ),
   'eager' => 
   array (
@@ -85,7 +86,8 @@
     29 => 'Pest\\Laravel\\PestServiceProvider',
     30 => 'Spatie\\MediaLibrary\\MediaLibraryServiceProvider',
     31 => 'App\\Providers\\AppServiceProvider',
-    32 => 'App\\Providers\\HorizonServiceProvider',
+    32 => 'App\\Providers\\AuthServiceProvider',
+    33 => 'App\\Providers\\HorizonServiceProvider',
   ),
   'deferred' => 
   array (
