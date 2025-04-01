@@ -111,4 +111,15 @@
       0 => 'Spatie\\MediaLibrary\\MediaLibraryServiceProvider',
     ),
   ),
+  'tailflow/laravel-orion' => 
+  array (
+    'aliases' => 
+    array (
+      'Orion' => 'Orion\\Facades\\Orion',
+    ),
+    'providers' => 
+    array (
+      0 => 'Orion\\OrionServiceProvider',
+    ),
+  ),
 );

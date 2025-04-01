@@ -1,11 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Orion\Facades\Orion;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\OrionBlogController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BreezeAuthController;
+
 
 
 // Public routes
@@ -37,6 +40,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::delete('/blogs/{id}', [BlogController::class, 'destroy']);
     Route::post('/blogs/{id}/restore', [BlogController::class, 'restore']);
     Route::delete('/blogs/{id}/force-delete', [BlogController::class, 'forceDelete']);
+
+    // Orion Blog routes
+    Orion:: resource('/blogs-orion', OrionBlogController::class)->withSoftDeletes();
 
     // Comment route
     Route::post('/comments', [CommentController::class, 'store']);

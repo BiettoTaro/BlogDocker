@@ -53,13 +53,13 @@ type Blog {
 
 # Queries for fetching posts
 type Query {
-  posts: [Blog!]! @all
-  post(id: ID!): Blog @find
+  blogs: [Blog!]! @all
+  blog(id: ID!): Blog @find
 }
 
 # Mutations for creating, updating and deleting posts
 type Mutation {
-  createPost(title: String!, content: String!): Blog @create
-  updatePost(id: ID!, title: String, content: String): Blog @update
-  deletePost(id: ID!): Blog @delete
+  createBlog(title: String!, content: String!, user_id: ID!): Blog @create
+  updateBlog(id: ID!, title: String, content: String, user_id: ID): Blog @update
+  deleteBlog(id: ID!): Blog @delete
 }

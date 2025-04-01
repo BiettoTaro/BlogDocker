@@ -48,9 +48,10 @@
     44 => 'Nuwave\\Lighthouse\\Validation\\ValidationServiceProvider',
     45 => 'Pest\\Laravel\\PestServiceProvider',
     46 => 'Spatie\\MediaLibrary\\MediaLibraryServiceProvider',
-    47 => 'App\\Providers\\AppServiceProvider',
-    48 => 'App\\Providers\\AuthServiceProvider',
-    49 => 'App\\Providers\\HorizonServiceProvider',
+    47 => 'Orion\\OrionServiceProvider',
+    48 => 'App\\Providers\\AppServiceProvider',
+    49 => 'App\\Providers\\AuthServiceProvider',
+    50 => 'App\\Providers\\HorizonServiceProvider',
   ),
   'eager' => 
   array (
@@ -85,9 +86,10 @@
     28 => 'Nuwave\\Lighthouse\\Validation\\ValidationServiceProvider',
     29 => 'Pest\\Laravel\\PestServiceProvider',
     30 => 'Spatie\\MediaLibrary\\MediaLibraryServiceProvider',
-    31 => 'App\\Providers\\AppServiceProvider',
-    32 => 'App\\Providers\\AuthServiceProvider',
-    33 => 'App\\Providers\\HorizonServiceProvider',
+    31 => 'Orion\\OrionServiceProvider',
+    32 => 'App\\Providers\\AppServiceProvider',
+    33 => 'App\\Providers\\AuthServiceProvider',
+    34 => 'App\\Providers\\HorizonServiceProvider',
   ),
   'deferred' => 
   array (
