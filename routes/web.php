@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrionBlogController;
-
+use App\Http\Controllers\Auth\KeycloakLoginController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,4 +21,9 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/orion', [OrionBlogController::class, 'index'])->name('orion.index');
 
+Route::get('/login/keycloak', [KeycloakLoginController::class, 'redirectToProvider'])->name('login.keycloak');
+Route::get('/login/keycloak/callback', [KeycloakLoginController::class, 'handleProviderCallback']);
+Route::get('/register/keycloak', [KeycloakLoginController::class, 'redirectToRegister'])
+     ->name('register.keycloak');
+     
 require __DIR__.'/auth.php';

@@ -29,29 +29,32 @@
     25 => 'Laravel\\Pail\\PailServiceProvider',
     26 => 'Laravel\\Sail\\SailServiceProvider',
     27 => 'Laravel\\Sanctum\\SanctumServiceProvider',
-    28 => 'Laravel\\Tinker\\TinkerServiceProvider',
-    29 => 'MLL\\GraphiQL\\GraphiQLServiceProvider',
-    30 => 'MLL\\GraphQLPlayground\\GraphQLPlaygroundServiceProvider',
-    31 => 'Carbon\\Laravel\\ServiceProvider',
-    32 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
-    33 => 'Termwind\\Laravel\\TermwindServiceProvider',
-    34 => 'Nuwave\\Lighthouse\\LighthouseServiceProvider',
-    35 => 'Nuwave\\Lighthouse\\Async\\AsyncServiceProvider',
-    36 => 'Nuwave\\Lighthouse\\Auth\\AuthServiceProvider',
-    37 => 'Nuwave\\Lighthouse\\Bind\\BindServiceProvider',
-    38 => 'Nuwave\\Lighthouse\\Cache\\CacheServiceProvider',
-    39 => 'Nuwave\\Lighthouse\\GlobalId\\GlobalIdServiceProvider',
-    40 => 'Nuwave\\Lighthouse\\OrderBy\\OrderByServiceProvider',
-    41 => 'Nuwave\\Lighthouse\\Pagination\\PaginationServiceProvider',
-    42 => 'Nuwave\\Lighthouse\\SoftDeletes\\SoftDeletesServiceProvider',
-    43 => 'Nuwave\\Lighthouse\\Testing\\TestingServiceProvider',
-    44 => 'Nuwave\\Lighthouse\\Validation\\ValidationServiceProvider',
-    45 => 'Pest\\Laravel\\PestServiceProvider',
-    46 => 'Spatie\\MediaLibrary\\MediaLibraryServiceProvider',
-    47 => 'Orion\\OrionServiceProvider',
-    48 => 'App\\Providers\\AppServiceProvider',
-    49 => 'App\\Providers\\AuthServiceProvider',
-    50 => 'App\\Providers\\HorizonServiceProvider',
+    28 => 'Laravel\\Socialite\\SocialiteServiceProvider',
+    29 => 'Laravel\\Tinker\\TinkerServiceProvider',
+    30 => 'MLL\\GraphiQL\\GraphiQLServiceProvider',
+    31 => 'MLL\\GraphQLPlayground\\GraphQLPlaygroundServiceProvider',
+    32 => 'Carbon\\Laravel\\ServiceProvider',
+    33 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+    34 => 'Termwind\\Laravel\\TermwindServiceProvider',
+    35 => 'Nuwave\\Lighthouse\\LighthouseServiceProvider',
+    36 => 'Nuwave\\Lighthouse\\Async\\AsyncServiceProvider',
+    37 => 'Nuwave\\Lighthouse\\Auth\\AuthServiceProvider',
+    38 => 'Nuwave\\Lighthouse\\Bind\\BindServiceProvider',
+    39 => 'Nuwave\\Lighthouse\\Cache\\CacheServiceProvider',
+    40 => 'Nuwave\\Lighthouse\\GlobalId\\GlobalIdServiceProvider',
+    41 => 'Nuwave\\Lighthouse\\OrderBy\\OrderByServiceProvider',
+    42 => 'Nuwave\\Lighthouse\\Pagination\\PaginationServiceProvider',
+    43 => 'Nuwave\\Lighthouse\\SoftDeletes\\SoftDeletesServiceProvider',
+    44 => 'Nuwave\\Lighthouse\\Testing\\TestingServiceProvider',
+    45 => 'Nuwave\\Lighthouse\\Validation\\ValidationServiceProvider',
+    46 => 'Pest\\Laravel\\PestServiceProvider',
+    47 => 'SocialiteProviders\\Manager\\ServiceProvider',
+    48 => 'Spatie\\MediaLibrary\\MediaLibraryServiceProvider',
+    49 => 'Orion\\OrionServiceProvider',
+    50 => 'App\\Providers\\AppServiceProvider',
+    51 => 'App\\Providers\\AuthServiceProvider',
+    52 => 'App\\Providers\\EventServiceProvider',
+    53 => 'App\\Providers\\HorizonServiceProvider',
   ),
   'eager' => 
   array (
@@ -89,7 +92,8 @@
     31 => 'Orion\\OrionServiceProvider',
     32 => 'App\\Providers\\AppServiceProvider',
     33 => 'App\\Providers\\AuthServiceProvider',
-    34 => 'App\\Providers\\HorizonServiceProvider',
+    34 => 'App\\Providers\\EventServiceProvider',
+    35 => 'App\\Providers\\HorizonServiceProvider',
   ),
   'deferred' => 
   array (
@@ -245,6 +249,7 @@
     'Laravel\\Breeze\\Console\\InstallCommand' => 'Laravel\\Breeze\\BreezeServiceProvider',
     'Laravel\\Sail\\Console\\InstallCommand' => 'Laravel\\Sail\\SailServiceProvider',
     'Laravel\\Sail\\Console\\PublishCommand' => 'Laravel\\Sail\\SailServiceProvider',
+    'Laravel\\Socialite\\Contracts\\Factory' => 'SocialiteProviders\\Manager\\ServiceProvider',
     'command.tinker' => 'Laravel\\Tinker\\TinkerServiceProvider',
   ),
   'when' => 
@@ -294,7 +299,13 @@
     'Laravel\\Sail\\SailServiceProvider' => 
     array (
     ),
+    'Laravel\\Socialite\\SocialiteServiceProvider' => 
+    array (
+    ),
     'Laravel\\Tinker\\TinkerServiceProvider' => 
+    array (
+    ),
+    'SocialiteProviders\\Manager\\ServiceProvider' => 
     array (
     ),
   ),

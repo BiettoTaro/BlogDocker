@@ -2,6 +2,23 @@
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
+    <!-- Keycloak Login Button -->
+    <div class="flex justify-center mb-6">
+        <a href="{{ route('login.keycloak') }}"
+           class="px-4 py-2 bg-blue-600 text-black rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            Login with Keycloak
+        </a>
+    </div>
+
+    <div class="flex justify-center mb-6">
+        <a href="{{ route('register.keycloak') }}"
+           class="px-4 py-2 bg-green-600 text-black rounded-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500">
+          Register with Keycloak
+        </a>
+      </div>
+      
+
+    <!-- Default Login Form -->
     <form method="POST" action="{{ route('login') }}">
         @csrf
 

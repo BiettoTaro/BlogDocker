@@ -42,6 +42,8 @@ return [
     'debug' => (bool) env('APP_DEBUG', false),
 
     App\Providers\RouteServiceProvider::class,
+    App\Providers\EventServiceProvider::class,
+
 
 
     /*

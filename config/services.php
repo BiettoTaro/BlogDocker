@@ -28,6 +28,15 @@ return [
         'key' => env('RESEND_KEY'),
     ],
 
+    'keycloak' => [
+    'client_id'     => env('KEYCLOAK_CLIENT_ID'),
+    'client_secret' => env('KEYCLOAK_CLIENT_SECRET'),
+    'redirect'      => env('KEYCLOAK_REDIRECT_URI'),
+    'base_url'      => env('KEYCLOAK_BASE_URL'),
+    'realms'        => env('KEYCLOAK_REALM'),
+],
+
+
     'slack' => [
         'notifications' => [
             'bot_user_oauth_token' => env('SLACK_BOT_USER_OAUTH_TOKEN'),
