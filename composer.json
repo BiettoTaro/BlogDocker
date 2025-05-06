@@ -16,6 +16,7 @@
         "mll-lab/laravel-graphiql": "^3.3",
         "mll-lab/laravel-graphql-playground": "^1.1",
         "nuwave/lighthouse": "^6.53",
+        "sentry/sentry-laravel": "^4.13",
         "socialiteproviders/keycloak": "^5.3",
         "spatie/laravel-medialibrary": "^11.12",
         "tailflow/laravel-orion": "^2.23"

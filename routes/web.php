@@ -19,11 +19,25 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/verify-sentry', function () {
+    try {
+        // force a failure
+        throw new \RuntimeException('This is a Sentry verification exception');
+    } catch (\Throwable $exception) {
+        // this is exactly your snippet
+        \Sentry\captureException($exception);
+    }
+
+    return '✅ Exception sent to Sentry – check your Issues list';
+});
+
 Route::get('/orion', [OrionBlogController::class, 'index'])->name('orion.index');
 
 Route::get('/login/keycloak', [KeycloakLoginController::class, 'redirectToProvider'])->name('login.keycloak');
 Route::get('/login/keycloak/callback', [KeycloakLoginController::class, 'handleProviderCallback']);
 Route::get('/register/keycloak', [KeycloakLoginController::class, 'redirectToRegister'])
      ->name('register.keycloak');
+
+
      
 require __DIR__.'/auth.php';
