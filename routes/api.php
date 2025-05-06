@@ -23,7 +23,7 @@ Route::post('/register', [BreezeAuthController::class, 'register']);
 
 
 // Protected routes
-Route::middleware('auth:sanctum')->group(function () {
+Route::middleware(['auth:sanctum', 'throttle:dynamic'])->group(function () {
     // User routes
     Route::get('/users', [UserController::class, 'getAllUsers']);
     Route::get('/users/{user}', [UserController::class, 'getUser']);
